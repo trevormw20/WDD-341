@@ -3,9 +3,10 @@ imgHover.addEventListener("mouseover", hoverChange);
 imgHover.addEventListener("mouseout", revertHover);
 
 function hoverChange() {
-this.body.style.backgroundImage = "url('img/me.jpg')" ;
+
+this.style.backgroundImage = "url('img/zombies.jpg')" ;
 }
 
 function revertHover() {
-    this.body.style.backgroundImage = "url('img/zombies.jpg')" ;
+    this.style.backgroundImage = "url('img/me.jpg')" ;  
 }
