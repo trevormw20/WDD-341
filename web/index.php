@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD341 Introduction</title>
     <meta name="description" content="Trevor Williams Introduction for WDD 341">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
@@ -15,7 +15,6 @@
     </nav>
 
     <main>
-        <?php echo "Test echo"; ?>
         <h1>Introduction</h1>
         <img src="/img/me.jpg" alt="Trevor Williams with his crying son">
         <p>My name is Trevor Williams. I live in Southern California with my wife and newborn son of 3 months.</p>
