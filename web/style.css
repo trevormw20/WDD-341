@@ -7,3 +7,30 @@ p {
     color: white;
     box-shadow: 4px 6px rgb(252 240 240);
 }
+
+nav ul {
+	list-style-type: none;
+	background-color: #3a3a3a;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+	padding: 0.2em;
+}
+
+nav li a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	text-align: center;
+	padding: 1em 0.3em;
+	font-weight: 700;
+}
+
+li a:hover {
+	background-color: #4c96d7;
+	color: black;
+}
