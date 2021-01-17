@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/nav.php'; ?>
+        <?php 'nav.php'; ?>
     </nav>
 
     <main>
