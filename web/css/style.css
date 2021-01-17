@@ -6,8 +6,7 @@ p {
     border-radius: 8px;
     color: white;
 	box-shadow: 4px 6px rgb(252, 240, 240);
-	float: right;
-	font-size: x-large;
+	font-size: large;
 }
 
 nav ul {
