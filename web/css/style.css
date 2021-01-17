@@ -36,3 +36,42 @@ li a:hover {
 	background-color: #3a3a3a;
 	color: rgb(252, 240, 240);
 }
+
+image {
+	display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hoverBackground {
+	position: absolute;
+	bottom: 0;
+	left: 100%;
+	right: 0;
+	background-color: #008CBA;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+  }
+  
+  .hover:hover .hoverBackground {
+	width: 100%;
+	left: 0;
+  }
+  
+  .hoverText {
+	white-space: nowrap; 
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+  }
+  .hover {
+	position: relative;
+	width: 50%;
+  }
