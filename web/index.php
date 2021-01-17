@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/nav.php'; ?>
     </nav>
 
     <main>
