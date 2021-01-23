@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php session_start(); ?>
+<?php session_start(); 
+$_SESSION["test"] = "working";?>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD341 Browse Items</title>
     <meta name="description" content="Trevor Williams Browse Items for WDD 341">
-    <link rel="stylesheet" type="text/css" href="css/style.css?version=2">
+    <link rel="stylesheet" type="text/css" href="/css/style.css?version=3">
 </head>
 
 <body>

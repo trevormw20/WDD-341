@@ -5,6 +5,7 @@ if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
 }
 
+
 switch ($action) {
 
     case 'addItem':
@@ -12,15 +13,9 @@ switch ($action) {
         $quantity = filter_input(INPUT_POST, 'quantity', FILTER_SANITIZE_NUMBER_INT);
         $itemPrice = filter_input(INPUT_POST, 'itemPrice', FILTER_SANITIZE_NUMBER_INT);
 
-        $itemAdded = addItem($itemName, $quantity, $itemPrice);
+    addItem($itemName, $quantity, $itemPrice);
 
-        if ($itemAdded) {
-            $message = '<p class="center">Item added to your shopping cart.</p>';
-            exit;
-        } else {
-            $message = '<p class="center">The reivew could not be added at this time. Please try agian later.</p>';
-            exit;
-        }
+
         var_dump($_SESSION[$itemName]);
         break;
 
