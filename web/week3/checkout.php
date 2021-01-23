@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <?php include 'nav.php'; ?>
+        <?php include '/nav.php'; ?>
     </nav>
 
     <main>
@@ -20,11 +20,15 @@
         <form action="/phpmotors/accounts/index.php" method="post" class="account-form">
                 <h3>Please sign up for your account</h3>
                 <label>First Name</label>
-                <input required name="clientFirstname" id="clientFirstname" type="text" placeholder="First Name" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?>>
+                <input required name="firstname" id="firstname" type="text" placeholder="First Name">
                 <label>Last Name</label>
-                <input required name="clientLastname" id="clientLastname" type="text" placeholder="Last Name" <?php if(isset($clientLastname)){echo "value='$clientLastname'";}  ?>>
-                <label>Email Address</label>
-                <input required name="clientEmail" id="clientEmail" type="email" placeholder="email@domain.com" <?php if(isset($clientEmail)){echo "value='$clientEmail'";}  ?>>
+                <input required name="lastname" id="lastname" type="text" placeholder="Last Name">
+                <label>Street</label>
+                <input required name="street" id="street" type="text" placeholder="123 Number Dr.">
+                <input required name="city" id="city" type="text" placeholder="snowville">
+                <input required name="state" id="state" type="text" placeholder="UT">
+                <input required name="zipcode" id="zipcode" type="number" placeholder="123456">
+                
                 <h5>All fields required.</h5>
                 <input type="submit" value="Complete Purchase" class="checkout-button">
                 <!--Add the action key-value pair-->
@@ -38,9 +42,3 @@
 </body>
 
 </html>
-
-
-The checkout page should ask the user for the different components of their 
-address. (No credit card or other purchase information is collected, only an address.)
-
-It should have the option to complete the purchase or return to the cart.
