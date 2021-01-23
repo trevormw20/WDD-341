@@ -17,7 +17,7 @@
     <main>
         <h1>Shopping Cart</h1>
     
-        <p><?php echo $_SESSION["item"];?></p>
+        <p><?php echo $_SESSION["charcoalPencils"];?></p>
 
         <?php unset($_SESSION['item']); ?>
 

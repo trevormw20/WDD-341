@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+//create session 
+session_start();
+?>
+
 
 <head>
     <meta charset="utf-8">
@@ -17,9 +22,11 @@
     <main>
         <h1>Introduction</h1>
         <div class="hover"><img id="imgHover" src="img/me.jpg" alt="Trevor Williams with his crying son">
-    <div class="hoverBackground"><div class="hoverText">Don't worry he is okay.</div></div>
-    </div>
-        
+            <div class="hoverBackground">
+                <div class="hoverText">Don't worry he is okay.</div>
+            </div>
+        </div>
+
         <p>My name is Trevor Williams. I live in Southern California with my wife and newborn son of 3 months.</p>
         <p>I am very passionate about learning game developement and not trying to make the
             biggest game ever. But I want to change the way we feel about the interaction and connection we have with
