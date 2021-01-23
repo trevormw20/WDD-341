@@ -3,6 +3,7 @@
 <?php
 //create session 
 session_start();
+$_SESSION["test"] = "working";
 ?>
 
 
