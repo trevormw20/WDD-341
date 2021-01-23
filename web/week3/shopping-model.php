@@ -21,6 +21,7 @@ switch ($action) {
             $message = '<p class="center">The reivew could not be added at this time. Please try agian later.</p>';
             exit;
         }
+        var_dump($_SESSION[$itemName]);
         break;
 
     case 'removeItem':
