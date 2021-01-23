@@ -75,3 +75,7 @@ image {
 	position: relative;
 	width: 50%;
   }
+
+  .pencils {
+	  max-width: 500px;
+  }

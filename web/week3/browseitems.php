@@ -23,7 +23,7 @@ $_SESSION["test"] = "working";?>
         <a href="viewcart.php">View Cart</a>
 
         <form action="shopping-model.php" method="post">
-            <img src="/img/items/charcoalPencils.jpg" alt="charcoal pencils">
+            <img class="pencils" src="/img/items/charcoalPencils.jpg" alt="charcoal pencils">
             <div>Charcoal Pencils $3</div>
             <label for="quantity">Quantity: </label>
             <input type="float" name="quantity" id="quantity" required><br><br>
