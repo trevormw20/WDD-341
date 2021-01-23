@@ -17,6 +17,7 @@ switch ($action) {
 
 
         var_dump($_SESSION[$itemName]);
+        include 'browseitems.php';
         break;
 
     case 'removeItem':
