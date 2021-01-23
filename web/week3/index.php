@@ -37,7 +37,7 @@ switch ($action) {
         break;
 
     default:
-        include '../web/week3/browseitems.php';
+        include 'browseitems.php';
         exit;
         break;
 }
