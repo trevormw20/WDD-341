@@ -19,7 +19,7 @@
 
         <a href="viewcart.php">View Cart</a>
 
-        <form action="/web/week3/shopping-model.php" method="post">
+        <form action="shopping-model.php" method="post">
             <img src="/img/items/charcoalPencils.jpg" alt="charcoal pencils">
             <div>Charcoal Pencils $3</div>
             <label for="quantity">Quantity: </label>
