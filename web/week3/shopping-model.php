@@ -1,43 +1,5 @@
 <?php
 
-$action = filter_input(INPUT_POST, 'action');
-if ($action == NULL) {
-    $action = filter_input(INPUT_GET, 'action');
-}
-
-
-switch ($action) {
-
-    case 'addItem':
-        $itemName = filter_input(INPUT_POST, 'itemName', FILTER_SANITIZE_STRING);
-        $quantity = filter_input(INPUT_POST, 'quantity', FILTER_SANITIZE_NUMBER_INT);
-        $itemPrice = filter_input(INPUT_POST, 'itemPrice', FILTER_SANITIZE_NUMBER_INT);
-
-    addItem($itemName, $quantity, $itemPrice);
-
-
-        var_dump($_SESSION[$itemName]);
-        include 'browseitems.php';
-        break;
-
-    case 'removeItem':
-
-        break;
-
-    case 'reduceQuantity':
-
-        break;
-
-    case 'increaseQuantity':
-        break;
-
-    default:
-        $pageTitle = 'Profile';
-        include '../accounts/index.php';
-        exit;
-        break;
-}
-
 function addItem($itemName, $quantity, $itemPrice)
 {
     $_SESSION["item"] = $itemName;

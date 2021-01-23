@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <?php include 'nav.php'; ?>
+        <?php include '/nav.php'; ?>
     </nav>
 
     <main>

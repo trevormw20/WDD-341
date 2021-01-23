@@ -14,7 +14,7 @@ $_SESSION["test"] = "working";?>
 
 <body>
     <nav>
-        <?php include 'nav.php'; ?>
+        <?php include '/nav.php'; ?>
     </nav>
 
     <main>
@@ -22,7 +22,7 @@ $_SESSION["test"] = "working";?>
 
         <a href="viewcart.php">View Cart</a>
 
-        <form action="shopping-model.php" method="post">
+        <form method="post">
             <img class="pencils" src="/img/items/charcoalPencils.jpg" alt="charcoal pencils">
             <div>Charcoal Pencils $3</div>
             <label for="quantity">Quantity: </label>
