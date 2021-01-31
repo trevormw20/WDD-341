@@ -1,0 +1,56 @@
+CREATE TABLE images (
+  imgId SERIAL PRIMARY KEY,
+  laptopId int NOT NULL,
+  imgName varchar(100) NOT NULL,
+  imgPath varchar(150) NOT NULL,
+  imgDate timestamp NOT NULL DEFAULT current_timestamp
+);
+
+CREATE TABLE laptops (
+  laptopId SERIAL PRIMARY KEY,
+  laptopMaker varchar(30) NOT NULL,
+  laptopModel varchar(30) NOT NULL,
+  laptopSpecs text DEFAULT NULL,
+  laptopGpu int NOT NULL,
+  laptopCpu varchar(6) NOT NULL,
+  laptopRam int NOT NULL,
+  laptopStorage varchar(5) NOT NULL,
+  laptopScreen int NOT NULL,
+  laptopImage varchar(50) NOT NULL,
+  laptopThumbnail varchar(50) NOT NULL,
+  laptopPrice decimal(10,0) NOT NULL,
+  series int NOT NULL,
+  releaseDate date NOT NULL,
+  lastGenRating int NOT NULL
+);
+
+
+CREATE TABLE users (
+  userId SERIAL PRIMARY KEY,
+  userFirstname varchar(15) NOT NULL,
+  userLastname varchar(25) NOT NULL,
+  userEmail varchar(40) NOT NULL,
+  userPassword varchar(255) NOT NULL,
+  UNIQUE(userEmail)
+);
+
+CREATE TABLE userpreference (
+  prefId SERIAL PRIMARY KEY,
+  likeText text NOT NULL,
+  dislikeText text NOT NULL,
+  prefDate timestamp NOT NULL DEFAULT current_timestamp,
+  laptopId int NOT NULL,
+  userId int NOT NULL,
+  CONSTRAINT fk_pref_laptops
+	FOREIGN KEY(laptopId)
+		REFERENCES laptops(laptopId),
+  CONSTRAINT fk_pref_users
+	FOREIGN KEY(userId) 
+		REFERENCES users(userId) 
+);
+
+
+
+
+
+
