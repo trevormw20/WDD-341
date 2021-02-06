@@ -1,8 +1,8 @@
 <?php
-/*
+
 //laptops controller
-require_once $_SERVER['DOCUMENT_ROOT'] . '/WDD-341/web/week4/laptop-model.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/WDD-341/web/week4/dbConnect.php';
+//require_once $_SERVER['DOCUMENT_ROOT'] . '/WDD-341/web/week4/laptop-model.php';
+//require_once $_SERVER['DOCUMENT_ROOT'] . '/WDD-341/web/week4/dbConnect.php';
 
 $db = get_db();
 
@@ -11,10 +11,8 @@ if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
 }
 
-*/
 
-
-//switch ($action) {
+switch ($action) {
 /*
     case 'insertNewReview':
         $reviewText = filter_input(INPUT_POST, 'reviewText', FILTER_SANITIZE_STRING);
@@ -114,37 +112,15 @@ if ($action == NULL) {
         break;
 
     */
-       // default:
+        default:
         //$pageTitle = 'Profile';
        // $laptops = laptopsData();
         //$laptopDisplay = laptopsDisplay($laptops);
-        //include '../week4/displayLaptops.php';
-        //exit;
-        //break;
-//}
+        include 'displayLaptops.php';
+        exit;
+        break;
+}
 
 //check for existing review before letting them make a new one on vehicle details page.
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-        <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WDD341 Hello World</title>
-        <meta name="description" content="Trevor Williams Hello World file for WDD 341">
-    </head>
-
-	<body>
-		<nav>
-            <h1>WDD341 Hello World update</h1>
-		</nav>
-
-		<main>
-		</main>
-
-		<footer>
-		</footer>
-	</body>
-</html>
