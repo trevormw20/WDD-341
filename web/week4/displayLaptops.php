@@ -28,8 +28,7 @@
 			</form>
 
 			<?php
-			$laptops = laptopsData($db);
-			$laptopDisplay = laptopsDisplay($laptops);
+			
 			echo $laptopDisplay;
 
 
