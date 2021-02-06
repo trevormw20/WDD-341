@@ -1,4 +1,4 @@
-<?php 
+<?php /*
 
 function get_db() {
 	$db = NULL;
@@ -44,6 +44,7 @@ $query = 'SELECT * FROM laptops';
 $stmt = $db($query);
 $stmt->execute();
 $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
+*/
 ?>
 
 <main>
