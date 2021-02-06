@@ -93,7 +93,7 @@
 
 
 					<input type="hidden" name="action" value="filter">
-					<input type="submit" value="Submit"><br>
+					<input type="submit" value="Submit"><br><br>
 					<input type="button" onclick="resetForm()" value="Reset filters">
 				</form>
 
@@ -102,19 +102,14 @@
 						document.getElementById("filterForm").reset();
 					}
 				</script>
-				<?php
-
-				echo $laptopDisplay;
-
-
-				//echo $laptops[0]['laptopmodel'];
-
-				echo '<pre>';
-				print_r($laptops);
-				echo '</pre>';
-
-
-				?>
+				<p class="laptopsDisplay">
+					<?php echo $laptopDisplay;
+					//echo $laptops[0]['laptopmodel'];
+					echo '<pre>';
+					print_r($laptops);
+					echo '</pre>';
+					?>
+				</p>
 
 		</main>
 	</div>

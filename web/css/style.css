@@ -295,5 +295,9 @@ body {
 }
 
 .filter-form{
-	
+	color: black;
+}
+
+.laptopsDisplay {
+	float: right;
 }
