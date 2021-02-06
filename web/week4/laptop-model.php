@@ -163,27 +163,27 @@ function filterLaptops($filter, $db)
     }
     
     if ($filter[1]) {
-        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterRam';
+        $sql = 'SELECT * FROM laptops WHERE laptopram = :filterRam';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':filterRam', $filter[1], PDO::PARAM_STR);
     }
     if ($filter[2]) {
-        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterCpu';
+        $sql = 'SELECT * FROM laptops WHERE laptopcpu = :filterCpu';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':filterCpu', $filter[2], PDO::PARAM_STR);
     }
     if ($filter[3]) {
-        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterGpu';
+        $sql = 'SELECT * FROM laptops WHERE laptopgpu = :filterGpu';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':filterGpu', $filter[3], PDO::PARAM_STR);
     }
     if ($filter[4]) {
-        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterStorage';
+        $sql = 'SELECT * FROM laptops WHERE laptopstorage = :filterStorage';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':filterStorage', $filter[4], PDO::PARAM_STR);
     }
     if ($filter[5]) {
-        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterScreen';
+        $sql = 'SELECT * FROM laptops WHERE laptopscreen = :filterScreen';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':filterScreen', $filter[5], PDO::PARAM_STR);
     }
