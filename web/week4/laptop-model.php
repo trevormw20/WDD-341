@@ -178,11 +178,11 @@ function filterLaptops($filter, $db)
     $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterMaker';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':filterMaker', $filter[0], PDO::PARAM_STR);
-    $stmt->bindValue(':filterRam', $filter[1], PDO::PARAM_STR);
-    $stmt->bindValue(':filterCpu', $filter[2], PDO::PARAM_STR);
-    $stmt->bindValue(':filterGpu', $filter[3], PDO::PARAM_STR);
-    $stmt->bindValue(':filterStorage', $filter[4], PDO::PARAM_STR);
-    $stmt->bindValue(':filterScreen', $filter[5], PDO::PARAM_STR);
+    //$stmt->bindValue(':filterRam', $filter[1], PDO::PARAM_STR);
+    //$stmt->bindValue(':filterCpu', $filter[2], PDO::PARAM_STR);
+    //$stmt->bindValue(':filterGpu', $filter[3], PDO::PARAM_STR);
+    //$stmt->bindValue(':filterStorage', $filter[4], PDO::PARAM_STR);
+    //$stmt->bindValue(':filterScreen', $filter[5], PDO::PARAM_STR);
     //$sql = 'SELECT * FROM laptops WHERE laptopmaker = :filter';
     //$stmt = $db->prepare($sql);
     // $stmt->bindValue(':filter', $filter, PDO::PARAM_STR);
