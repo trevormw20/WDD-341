@@ -149,6 +149,17 @@ function laptopsData($db) {
     return $laptops;
 }
 
+//filtered laptop display
+function filterLaptops($filter, $db) {
+    $sql = 'SELECT :filter FROM laptops';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':filter', $filter, PDO::PARAM_STR);
+    $stmt->execute();
+    $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $laptops;
+}
+
 
 
 //examples

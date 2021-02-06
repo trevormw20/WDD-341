@@ -13,7 +13,7 @@ if ($action == NULL) {
 
 
 switch ($action) {
-/*
+        /*
     case 'insertNewReview':
         $reviewText = filter_input(INPUT_POST, 'reviewText', FILTER_SANITIZE_STRING);
         $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_NUMBER_INT);
@@ -112,15 +112,20 @@ switch ($action) {
         break;
 
     */
-        default:
+
+    case 'filter':
+        $filerSelected = filter_input(INPUT_POST, 'filter');
+        $laptops = filterLaptops($filerSelected, $db);
+        $laptopDisplay = laptopsDisplay($laptops);
+        break;
+
+    default:
         //$pageTitle = 'Profile';
-       // $laptops = laptopsData();
-        //$laptopDisplay = laptopsDisplay($laptops);
+        $laptops = laptopsData($db);
+        $laptopDisplay = laptopsDisplay($laptops);
         include 'displayLaptops.php';
         exit;
         break;
 }
 
 //check for existing review before letting them make a new one on vehicle details page.
-
-?>
