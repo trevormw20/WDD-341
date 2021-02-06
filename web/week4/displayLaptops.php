@@ -4,7 +4,7 @@
 <?php 
 //laptops controller
 //require_once $_SERVER['DOCUMENT_ROOT'] . '/WDD-341/web/week4/laptop-model.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/WDD-341/web/week4/dbConnect.php';
+require_once 'dbConnect.php';
 
 $db = get_db();
 
