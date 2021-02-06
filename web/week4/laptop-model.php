@@ -128,7 +128,8 @@ function laptopsDisplay($laptops)
 {
     $dv = '<ul>';
     foreach ($laptops as $laptop) {
-        $dv .= $laptop[0]['laptopmaker'];
+        $dv .= $laptops[0]['laptopmodel'] . "<br>";
+        $dv .= $laptops[0]['laptopmaker'];
         $dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
         $dv .= '</li>';
     }
