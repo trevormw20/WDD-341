@@ -116,7 +116,7 @@ switch ($action) {
         //$pageTitle = 'Profile';
        // $laptops = laptopsData();
         //$laptopDisplay = laptopsDisplay($laptops);
-        include 'displayLaptops.php';
+        include '/displayLaptops.php';
         exit;
         break;
 }
