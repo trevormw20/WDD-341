@@ -47,13 +47,13 @@
 					<input type="radio" name="cpu" value="Intel9">
 					<label for="Intel9"> Intel i9</label><br>
 
-					<input type="radio" name="cpu" value="Ryzen5">
+					<input type="radio" name="cpu" value="RYZEN5">
 					<label for="Ryzen5"> Ryzen 5</label><br>
 
-					<input type="radio" name="cpu" value="Ryzen7">
+					<input type="radio" name="cpu" value="RYZEN7">
 					<label for="Ryzen7"> Ryzen 7</label><br>
 
-					<input type="radio" name="cpu" value="Ryzen9">
+					<input type="radio" name="cpu" value="RYZEN9">
 					<label for="Ryzen9"> Ryzen 9</label><br><br>
 
 
