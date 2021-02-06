@@ -292,7 +292,7 @@ image {
 body {
     background-color: rgb(255, 255, 255);
 	padding: 0em 3em 3em 3em;
-	height: 20em;
+	min-height: 80em;
 }
 
 .filter-form{
@@ -307,5 +307,5 @@ body {
 	max-width: 7em;
 	float: left;
 	border-radius: 1px;
-	margin: 5em;
+	margin: 2em 7em 2em 4em;
 }
