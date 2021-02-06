@@ -41,9 +41,9 @@ function get_db() {
 $db = get_db();
 
 $query = 'SELECT * FROM laptops';
-$stmt = $db($query);
+$stmt = $db->prepare($query);
 $stmt->execute();
-//$laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
