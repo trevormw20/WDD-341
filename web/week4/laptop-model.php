@@ -13,6 +13,7 @@
 */
 
 //Insert a review
+/*
 function insertReview($reviewText, $invId, $clientId) {
     $reviewDate = date("Y-m-d H:i:s");
     $db = phpmotorsConnect();
@@ -121,18 +122,7 @@ function confirmDeleteReview($review)
 
 /*
 * Proxy connection to the phpmotors database
-*/
-function wdd341Database(){
-    $server = 'localhost';
-    $dbname= 'phpmotors';
-    $username = 'iClient';
-    $password = '2ubDBYXhFPTbcx2S'; 
-    $dsn = "mysql:host=$server;dbname=$dbname";
-    $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-   
-   }
-   wdd341Database();
-   
+*/ 
 
 function laptopsDisplay($laptops)
 {
@@ -148,10 +138,10 @@ function laptopsDisplay($laptops)
 
 //done
 //Get reviews written by a specific client
-function laptopsData() {
-    $db = wdd341Database();
-    $sql = 'SELECT * FROM laptops';
-    $stmt = $db->prepare($sql);
+function laptopsData($db) {
+    
+    $query = 'SELECT * FROM laptops';
+    $stmt = $db->prepare($query);
     $stmt->execute();
     $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
@@ -162,4 +152,3 @@ function laptopsData() {
 
 //examples
 //$reviews = clientReviews($_SESSION['clientData']['clientId']);
-?>
