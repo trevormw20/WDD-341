@@ -155,7 +155,7 @@ function laptopsData($db)
 //filtered laptop display
 function filterLaptops($filter, $db)
 {
-
+/*
     if ($filter[0]) {
         $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterMaker';
     }
@@ -174,8 +174,8 @@ function filterLaptops($filter, $db)
     if ($filter[5]) {
         $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterScreen';
     }
-    
-
+    */
+    $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterMaker';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':filterMaker', $filter[0], PDO::PARAM_STR);
     $stmt->bindValue(':filterRam', $filter[1], PDO::PARAM_STR);

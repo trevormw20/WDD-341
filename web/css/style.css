@@ -307,7 +307,8 @@ body {
 	max-width: 7em;
 	float: left;
 	border-radius: 1px;
-	margin: 1em 7em 2em 2em;
+	margin: .5em 6.5em 1.5em 1.5em;
+	padding: .5em;
 	border-style: solid;
 }
 
