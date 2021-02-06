@@ -47,7 +47,7 @@ $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <main>
-
+ <p>Hello Laptops</p>
 <?php //if (isset($laptopDisplay)) {
 		//echo $laptopDisplay;}
 
