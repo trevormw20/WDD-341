@@ -80,3 +80,215 @@ image {
 	  max-width: 400px;
 	  max-height: 400px;
   }
+
+
+  .redBanner {
+    left: -.5em;
+    background-color: #bb2e13;
+    color: #fffffe;
+    padding: .5em 2em .5em 1em;
+    text-align: center;
+    font: 100x ;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
+        inset 0px 0px 20px #0000001a,
+        0px 1px 1px rgba(0, 0, 0, 0.4);
+        display: inline-block;
+}
+
+.redBanner:before {
+    left: 0;
+    border-width: .5em 0 0 .5em;
+    content: "";
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #92220c transparent transparent transparent;
+    z-index: -1;
+
+}
+
+
+.greenBanner {
+    left: -.5em;
+    background-color: #9ec536;
+    color: #fffffe;
+    padding: .5em 2em .5em 1em;
+    text-align: center;
+    font: 100x ;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
+        inset 0px 0px 20px rgba(0, 0, 0, 0.1),
+        0px 1px 1px rgba(0, 0, 0, 0.4);
+        display: inline-block;
+}
+
+.greenBanner:before {
+    left: 0;
+    border-width: .5em 0 0 .5em;
+    content: "";
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #708b25 transparent transparent transparent;
+    z-index: -1;
+
+}
+
+.purpleBanner {
+    left: -.5em;
+    background-color: #777b9e;
+    color: #fffffe;
+    padding: .5em 2em .5em 1em;
+    text-align: center;
+    font: 100x ;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
+        inset 0px 0px 20px rgba(0, 0, 0, 0.1),
+        0px 1px 1px rgba(0, 0, 0, 0.4);
+        display: inline-block;
+}
+
+.purpleBanner:before {
+    left: 0;
+    border-width: .5em 0 0 .5em;
+    content: "";
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #4b5185 transparent transparent transparent;
+    z-index: -1;
+
+}
+.purpleBanner a {
+    list-style: none;
+    color: #fffffe;
+    font-size: x-large;
+}
+
+.blueBanner {
+    left: -.5em;
+    background-color: #3cc0b7;
+    color: #fffffe;
+    padding: .5em 2em .5em 1em;
+    text-align: center;
+    font: 100x ;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
+        inset 0px 0px 20px rgba(0, 0, 0, 0.1),
+        0px 1px 1px rgba(0, 0, 0, 0.4);
+        display: inline-block;
+}
+
+.blueBanner:before {
+    left: 0;
+    border-width: .5em 0 0 .5em;
+    content: "";
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #2b968f transparent transparent transparent;
+    z-index: -1;
+
+}
+
+.orangeBanner {
+    left: -.5em;
+    background-color: #eba14b;
+    color: #fffffe;
+    padding: .5em 2em .5em 1em;
+    text-align: center;
+    font: 100x ;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
+        inset 0px 0px 20px rgba(0, 0, 0, 0.1),
+        0px 1px 1px rgba(0, 0, 0, 0.4);
+        display: inline-block;
+}
+
+.orangeBanner:before {
+    left: 0;
+    border-width: .5em 0 0 .5em;
+    content: "";
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #cc8a3f transparent transparent transparent;
+    z-index: -1;
+
+}
+
+.yellowBanner {
+    left: -.5em;
+    background-color: #dac26c;
+    color: #fffffe;
+    padding: .5em 2em .5em 1em;
+    text-align: center;
+    font: 100x ;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
+        inset 0px 0px 20px rgba(0, 0, 0, 0.1),
+        0px 1px 1px rgba(0, 0, 0, 0.4);
+        display: inline-block;
+}
+
+.yellowBanner:before {
+    left: 0;
+    border-width: .5em 0 0 .5em;
+    content: "";
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #bba556 transparent transparent transparent;
+    z-index: -1;
+
+}
+
+.greyBanner {
+    left: -.5em;
+    background-color: #978766;
+    color: #fffffe;
+    padding: .5em 2em .5em 1em;
+    text-align: center;
+    font: 100x ;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
+        inset 0px 0px 20px rgba(0, 0, 0, 0.1),
+        0px 1px 1px rgba(0, 0, 0, 0.4);
+        display: inline-block;
+}
+
+.greyBanner:before {
+    left: 0;
+    border-width: .5em 0 0 .5em;
+    content: "";
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #807154 transparent transparent transparent;
+    z-index: -1;
+
+}
+
+.sidesSpacer {
+    box-shadow: 0 3px 5px 0 rgb(238, 238, 238), 0 5px 10px 0 rgb(216, 216, 216); 
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    padding: 0em 3em 3em 3em;
+}
