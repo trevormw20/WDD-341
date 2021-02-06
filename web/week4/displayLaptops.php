@@ -51,9 +51,12 @@ $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
  <p>Hello Laptops</p>
 <?php //if (isset($laptopDisplay)) {
 		//echo $laptopDisplay;}
-		$laptopsModel = $laptops['laptopModel'];
 
-echo "<p>$laptopsModel</p>";
+		//echo $laptops;
+
+		foreach($laptops['data'] as $result) {
+			echo $result['laptopModel'], '<br>';
+		}
 	 ?>
 
 </main>
