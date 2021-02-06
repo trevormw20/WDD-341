@@ -305,4 +305,6 @@ body {
 .filterForm {
 	max-width: 5em;
 	float: left;
+	border-radius: 1px;
+	margin: 2em;
 }
