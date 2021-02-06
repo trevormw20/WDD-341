@@ -130,7 +130,7 @@ function laptopsDisplay($laptops)
     foreach ($laptops as $laptop) {
         $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
         $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
-        $dv .= $laptop['laptopram'] . ' ' . $laptop['laptopstorage'] . "TB ";
+        $dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
         $dv .= $laptop['laptopscreen'] . "\"";
         //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
         $dv .= '</li>';
@@ -178,7 +178,7 @@ function filterLaptops($filter, $db)
     $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterMaker';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':filterMaker', $filter[0], PDO::PARAM_STR);
-    //$stmt->bindValue(':filterRam', $filter[1], PDO::PARAM_STR);
+    $stmt->bindValue(':filterRam', $filter[1], PDO::PARAM_STR);
     //$stmt->bindValue(':filterCpu', $filter[2], PDO::PARAM_STR);
     //$stmt->bindValue(':filterGpu', $filter[3], PDO::PARAM_STR);
     //$stmt->bindValue(':filterStorage', $filter[4], PDO::PARAM_STR);
