@@ -1,11 +1,3 @@
-<?php
-//laptops controller
-require_once 'laptop-model.php';
-require_once 'dbConnect.php';
-
-$db = get_db();
-?>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
