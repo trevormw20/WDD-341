@@ -117,6 +117,8 @@ switch ($action) {
         $filerSelected = filter_input(INPUT_POST, 'filter');
         $laptops = filterLaptops($filerSelected, $db);
         $laptopDisplay = laptopsDisplay($laptops);
+        include 'displayLaptops.php';
+        exit;
         break;
 
     default:
