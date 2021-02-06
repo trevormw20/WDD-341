@@ -54,9 +54,7 @@ $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 		//echo $laptops;
 
-		foreach($laptops['data'] as $result) {
-			echo $result['laptopModel'], '<br>';
-		}
+		echo '<pre>'; print_r($laptops); echo '</pre>';
 	 ?>
 
 </main>
