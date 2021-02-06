@@ -122,14 +122,16 @@ function confirmDeleteReview($review)
 
 /*
 * Proxy connection to the phpmotors database
-*/ 
+*/
 
 function laptopsDisplay($laptops)
 {
     $dv = '<ul>';
     foreach ($laptops as $laptop) {
-        $dv .= $laptop['laptopmodel'] . "<br>";
-        $dv .= $laptop['laptopmaker'] . "<br>";
+        $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
+        $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
+        $dv .= $laptop['laptopram'] . ' ' . $laptop['laptopstorage'] . "TB ";
+        $dv .= $laptop['laptopscreen'] . "\"";
         //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
         $dv .= '</li>';
     }
@@ -139,8 +141,9 @@ function laptopsDisplay($laptops)
 
 //done
 //Get reviews written by a specific client
-function laptopsData($db) {
-    
+function laptopsData($db)
+{
+
     $query = 'SELECT * FROM laptops';
     $stmt = $db->prepare($query);
     $stmt->execute();
@@ -150,10 +153,39 @@ function laptopsData($db) {
 }
 
 //filtered laptop display
-function filterLaptops($filter, $db) {
-    $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filter';
+function filterLaptops($filter, $db)
+{
+
+    if ($filter[0]) {
+        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterMaker';
+    }
+    if ($filter[1]) {
+        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterRam';
+    }
+    if ($filter[2]) {
+        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterCpu';
+    }
+    if ($filter[3]) {
+        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterGpu';
+    }
+    if ($filter[4]) {
+        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterStorage';
+    }
+    if ($filter[5]) {
+        $sql = 'SELECT * FROM laptops WHERE laptopmaker = :filterScreen';
+    }
+    
+
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':filter', $filter, PDO::PARAM_STR);
+    $stmt->bindValue(':filterMaker', $filter[0], PDO::PARAM_STR);
+    $stmt->bindValue(':filterRam', $filter[1], PDO::PARAM_STR);
+    $stmt->bindValue(':filterCpu', $filter[2], PDO::PARAM_STR);
+    $stmt->bindValue(':filterGpu', $filter[3], PDO::PARAM_STR);
+    $stmt->bindValue(':filterStorage', $filter[4], PDO::PARAM_STR);
+    $stmt->bindValue(':filterScreen', $filter[5], PDO::PARAM_STR);
+    //$sql = 'SELECT * FROM laptops WHERE laptopmaker = :filter';
+    //$stmt = $db->prepare($sql);
+    // $stmt->bindValue(':filter', $filter, PDO::PARAM_STR);
     $stmt->execute();
     $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();

@@ -114,7 +114,16 @@ switch ($action) {
     */
 
     case 'filter':
-        $filerSelected = filter_input(INPUT_POST, 'maker');
+        $maker = filter_input(INPUT_POST, 'maker');
+        $ram = filter_input(INPUT_POST, 'ram');
+        $cpu = filter_input(INPUT_POST, 'cpu');
+        $gpu = filter_input(INPUT_POST, 'gpu');
+        $storage = filter_input(INPUT_POST, 'storage');
+        $screen = filter_input(INPUT_POST, 'screen');
+
+        $filerSelected = [$maker, $ram, $cpu, $gpu, $storage, $screen];
+
+
         $laptops = filterLaptops($filerSelected, $db);
         $laptopDisplay = laptopsDisplay($laptops);
         include 'displayLaptops.php';
