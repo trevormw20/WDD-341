@@ -17,7 +17,7 @@ $db = get_db();
 
 		echo $laptops[0]['laptopmodel'];
 
-		echo $laptops[0];
+		echo '<pre>'; print_r($laptops[0]); echo '</pre>';
 
 
 	 ?>
