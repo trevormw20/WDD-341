@@ -51,9 +51,9 @@ $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
  <p>Hello Laptops</p>
 <?php //if (isset($laptopDisplay)) {
 		//echo $laptopDisplay;}
+		$laptopsModel = $laptops['laptopModel'];
 
-echo $laptops[0];
-echo $laptops[1];
+echo "<p>$laptopsModel</p>";
 	 ?>
 
 </main>
