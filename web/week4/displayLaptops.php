@@ -14,14 +14,26 @@
 			<h3>Select Filters</h1><hr>
 			<form action="index.php" method="post" class="filter-form">
 				<pre>Maker</pre>
-				<input type="checkbox"  name="maker" value="ASUS">
+				<input type="radio"  name="maker" value="ASUS">
 				<label for="Acer"> Asus</label><br>
 
-				<input type="checkbox"  name="maker" value="MSI">
+				<input type="radio"  name="maker" value="MSI">
 				<label for="MSI"> MSI</label><br>
 
-				<input type="checkbox"  name="maker" value="ACER">
+				<input type="radio"  name="maker" value="ACER">
 				<label for="Acer"> Acer</label><br><br>
+
+				<pre>Ram</pre>
+				<input type="radio"  name="ram" value="8">
+				<label for="8"> 8gb</label><br><br>
+
+				<input type="radio"  name="ram" value="16">
+				<label for="16"> 16gb</label><br>
+
+				<input type="radio"  name="ram" value="32">
+				<label for="32"> 32gb</label><br>
+
+				
 
 				<input type="hidden" name="action" value="filter">
 				<input type="submit" value="Submit">
