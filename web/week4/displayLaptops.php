@@ -23,6 +23,7 @@
 				<input type="checkbox"  name="maker" value="ACER">
 				<label for="Acer"> Acer</label><br><br>
 
+				<input type="hidden" name="action" value="filter">
 				<input type="submit" value="Submit">
 			</form>
 			<?php
