@@ -292,7 +292,7 @@ image {
 body {
     background-color: rgb(255, 255, 255);
 	padding: 0em 3em 3em 3em;
-	min-height: 80em;
+	
 }
 
 .filter-form{
@@ -301,11 +301,12 @@ body {
 
 .laptopsDisplay {
 	float: right;
+	min-height: 80em;
 }
 
 .filterForm {
 	max-width: 7em;
 	float: left;
 	border-radius: 1px;
-	margin: 2em 7em 2em 4em;
+	margin: 1em 7em 2em 2em;
 }
