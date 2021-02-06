@@ -11,9 +11,10 @@
 		<h1 class="redBanner">Week 4 Prove Assignment</h1>
 		<main>
 
-			<h3>Select Filters</h1>
+			<div class="filterForm">
+				<h3>Select Filters</h3>
 				<hr>
-				<form action="index.php" method="post" class="filterForm" id="filterForm">
+				<form action="index.php" method="post" id="filterForm">
 					<pre>Maker</pre>
 					<input type="radio" name="maker" value="ASUS">
 					<label for="Acer"> Asus</label><br>
@@ -96,20 +97,21 @@
 					<input type="submit" value="Submit"><br><br>
 					<input type="button" onclick="resetForm()" value="Reset filters">
 				</form>
+			</div>
 
-				<script>
-					function resetForm() {
-						document.getElementById("filterForm").reset();
-					}
-				</script>
-				<p class="laptopsDisplay">
-					<?php echo $laptopDisplay;
-					//echo $laptops[0]['laptopmodel'];
-					echo '<pre>';
-					print_r($laptops);
-					echo '</pre>';
-					?>
-				</p>
+			<script>
+				function resetForm() {
+					document.getElementById("filterForm").reset();
+				}
+			</script>
+			<p class="laptopsDisplay">
+				<?php echo $laptopDisplay;
+				//echo $laptops[0]['laptopmodel'];
+				echo '<pre>';
+				print_r($laptops);
+				echo '</pre>';
+				?>
+			</p>
 
 		</main>
 	</div>

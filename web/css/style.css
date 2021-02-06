@@ -301,3 +301,7 @@ body {
 .laptopsDisplay {
 	float: right;
 }
+
+.filterForm {
+	max-width: 5em;
+}
