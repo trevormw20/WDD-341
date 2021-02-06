@@ -52,9 +52,10 @@ $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php //if (isset($laptopDisplay)) {
 		//echo $laptopDisplay;}
 
-		//echo $laptops;
+		echo $laptops[0]['laptopModel'] ;
+		
 
-		echo '<pre>'; print_r($laptops); echo '</pre>';
+		echo '<br><br><pre>'; print_r($laptops); echo '</pre>';
 	 ?>
 
 </main>
