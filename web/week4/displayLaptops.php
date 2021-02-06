@@ -15,7 +15,7 @@ $db = get_db();
 
 <body>
 	<main class="sidesSpacer">
-		<p class="redBanner">Hello Laptops</p>
+		<p class="redBanner">Week 4 Prove Assignment</p>
 		<?php //if (isset($laptopDisplay)) {
 
 		$laptops = laptopsData($db);
