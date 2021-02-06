@@ -15,20 +15,35 @@
 
 				Filter: <select name="chapter" id="chapter">
 					<option value="" selected="selected">Please select a filter</option>
-					<option value="laptopmaker" >Laptop Maker</option>
-					<option value="laptopmodel" >Laptop Model</option>
-					<option value="laptopgpu" >Laptop GPU</option>
-					<option value="laptopram" >Laptop Ram</option>
-					<option value="laptopstorage" >Laptop Storage</option>
-					<option value="laptopscreen" >Laptop Screen Size</option>
+					<option value="laptopmaker">Laptop Maker</option>
+					<option value="laptopmodel">Laptop Model</option>
+					<option value="laptopgpu">Laptop GPU</option>
+					<option value="laptopram">Laptop Ram</option>
+					<option value="laptopstorage">Laptop Storage</option>
+					<option value="laptopscreen">Laptop Screen Size</option>
 				</select>
 				<br><br>
 				<input type="hidden" name="action" value="filter">
 				<input type="submit" value="filter">
 			</form>
 
+			<h3>Select Filters</h1><hr>
+			<form action="index.php" method="post" class="filter-form">
+				<pre>Maker</pre>
+				<input type="checkbox"  name="maker" value="Asus">
+				<label for="Acer"> Asus</label><br>
+
+				<input type="checkbox"  name="maker" value="MSI">
+				<label for="MSI"> MSI</label><br>
+
+				<input type="checkbox"  name="maker" value="Acer">
+				<label for="Acer"> Acer</label><br><br>
+
+				//<input type="hidden" name="action" value="filter">
+				<input type="submit" value="Submit">
+			</form>
 			<?php
-			
+
 			echo $laptopDisplay;
 
 

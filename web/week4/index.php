@@ -114,7 +114,7 @@ switch ($action) {
     */
 
     case 'filter':
-        $filerSelected = filter_input(INPUT_POST, 'filter');
+        $filerSelected = filter_input(INPUT_POST, 'maker');
         $laptops = filterLaptops($filerSelected, $db);
         $laptopDisplay = laptopsDisplay($laptops);
         include 'displayLaptops.php';
