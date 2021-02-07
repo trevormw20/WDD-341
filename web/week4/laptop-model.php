@@ -131,7 +131,7 @@ function laptopsDisplay($laptops)
         $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
         $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
         $dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
-        $dv .= $laptop['laptopscreen'] . "\"";
+        $dv .= $laptop['laptopscreen'] . "\"<br>";
         //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
         $dv .= '</li>';
     }
