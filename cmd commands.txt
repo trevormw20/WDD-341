@@ -1,0 +1,101 @@
+cd C:\Users\Trevor\Documents\GitHub\WDD-341
+
+git add web/eee		filename
+
+git commit -m "eee"	comment in quotes
+
+git push heroku master	sends a push
+
+heroku pg:info		see databases and their info
+
+heroku pg:psql		connect to db
+
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('4', 'MSI', 'GF65', 'TEST SPECS', '3060', 'Intel5', '8', '512', '15', 'NONE', 'NONE', '999', '30', '2021-01-18', '7');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('5', 'Gigabyte', 'A5', 'TEST SPECS', '3060', 'Intel5', '16', '512', '15', 'NONE', 'NONE', '1099', '30', '2021-02-09', '6');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('6', 'ASUS', 'F15', 'TEST SPECS', '3060', 'Intel7', '16', '1000', '15', 'NONE', 'NONE', '1099', '30', '2021-02-05', '5');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('7', 'ASUS', 'A15', 'TEST SPECS', '3060', 'RYZEN7', '16', '512', '15', 'NONE', 'NONE', '1199', '30', '2021-02-09', '6');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('8', 'MSI', 'GF65', 'TEST SPECS', '3060', 'Intel7', '16', '512', '15', 'NONE', 'NONE', '1299', '30', '2021-01-18', '8');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('9', 'ASUS', 'G15', 'TEST SPECS', '3060', 'RYZEN7', '16', '512', '15', 'NONE', 'NONE', '1399', '30', '2021-01-18', '10');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('10', 'ASUS', 'A17', 'TEST SPECS', '3060', 'RYZEN7', '16', '1000', '17', 'NONE', 'NONE', '1299', '30', '2021-02-09', '7');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('11', 'Gigabyte', 'A7', 'TEST SPECS', '3060', 'RYZEN7', '16', '512', '17', 'NONE', 'NONE', '1399', '30', '2021-01-18', '9');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('12', 'Gigabyte', 'A5', 'TEST SPECS', '3070', 'RYZEN7', '16', '512', '15', 'NONE', 'NONE', '1599', '30', '2021-01-18', '6');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('13', 'MSI', 'GP66', 'TEST SPECS', '3070', 'Intel7', '16', '512', '15', 'NONE', 'NONE', '1799', '30', '2021-01-18', '4');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('14', 'ASUS', 'ZG15', 'TEST SPECS', '3070', 'RYZEN9', '16', '1000', '15', 'NONE', 'NONE', '1799', '30', '2021-01-18', '7');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('15', 'ASUS', 'SG17', 'TEST SPECS', '3070', 'RYZEN9', '16', '1000', '17', 'NONE', 'NONE', '1799', '30', '2021-02-09', '8');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('16', 'ASUS', 'SG15', 'TEST SPECS', '3070', 'RYZEN9', '16', '1000', '15', 'NONE', 'NONE', '1799', '30', '2021-01-18', '6');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('17', 'MSI', 'GE66', 'TEST SPECS', '3070', 'Intel7', '32', '1000', '15', 'NONE', 'NONE', '2199', '30', '2021-02-09', '9');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('18', 'MSI', 'GE76', 'TEST SPECS', '3070', 'RYZEN9', '32', '1000', '17', 'NONE', 'NONE', '2199', '30', '2021-01-18', '5');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('19', 'MSI', 'GS66', 'TEST SPECS', '3080', 'INTEL7', '32', '1000', '15', 'NONE', 'NONE', '2699', '30', '2021-02-09', '7');
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('20', 'ASUS', 'SCAR15', 'TEST SPECS', '3080', 'RYZEN9', '16', '1000', '15', 'NONE', 'NONE', '2699', '30', '2021-02-09', '9');
+
+
+INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
+laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
+('20', 'ASUS', 'SCAR17', 'TEST SPECS', '3080', 'RYZEN9', '32', '1000', '17', 'NONE', 'NONE', '2699', '30', '2021-01-18', '8');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

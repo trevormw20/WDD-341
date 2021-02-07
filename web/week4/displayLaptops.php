@@ -69,8 +69,8 @@
 
 
 					<pre>Storage</pre>
-					<input type="radio" name="storage" value="516">
-					<label for="516"> 516 GB</label><br>
+					<input type="radio" name="storage" value="512">
+					<label for="512"> 512 GB</label><br>
 
 					<input type="radio" name="storage" value="1000">
 					<label for="10000"> 1 TB</label><br>
@@ -107,9 +107,9 @@
 			<p class="laptopsDisplay">
 				<?php echo $laptopDisplay;
 				//echo $laptops[0]['laptopmodel'];
-				echo '<pre>';
-				print_r($laptops);
-				echo '</pre>';
+				//echo '<pre>';
+				//print_r($laptops);
+				//echo '</pre>';
 				?>
 			</p>
 
