@@ -1,13 +1,4 @@
-p {
-    font-weight: bold;
-    background-color: rgb(150, 0, 0);
-    margin: 1em;
-    padding: 1em;
-    border-radius: 8px;
-    color: white;
-	box-shadow: 4px 6px rgb(252, 240, 240);
-	font-size: large;
-}
+
 
 nav ul {
 	list-style-type: none;
