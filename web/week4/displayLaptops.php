@@ -22,8 +22,8 @@
 					<input type="radio" name="maker" value="MSI">
 					<label for="MSI"> MSI</label><br>
 
-					<input type="radio" name="maker" value="ACER">
-					<label for="Acer"> Acer</label><br><br>
+					<input type="radio" name="maker" value="Gigabyte">
+					<label for="Gigabyte"> Gigabyte</label><br><br>
 
 
 					<pre>Ram</pre>
