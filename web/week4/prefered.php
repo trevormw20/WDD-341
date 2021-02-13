@@ -1,9 +1,6 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
 
-
-
 <main>
-
 
 	<h3>Account Management</h3>
 	<p>Use this link to update account information.</p>
