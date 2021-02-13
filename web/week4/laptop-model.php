@@ -12,8 +12,8 @@ function laptopsDisplay($laptops)
         $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
         $dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
         $dv .= $laptop['laptopscreen'] . "\"";
-        //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
-        $dv .= '</li><br>';
+        $dv .= "<a href=/WDD-341/web/week4/?action=laptopDetails&laptopId=" . $laptop['laptopId'] . ">View details</a>";
+        $dv .= '</li>';
     }
     $dv .= '</ul>';
     return $dv;
@@ -83,4 +83,64 @@ function filterLaptops($filter, $db)
     return $laptops;
 }
 
+function addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId) {
+    $prefDate = date("Y-m-d H:i:s");
+    $db = get_db();
+    $sql = 'INSERT INTO reviews (prefId, likeText, dislikeText, prefDate, laptopId, userId) VALUES (:prefId, :likeText, :dislikeText, :prefDate, :laptopId, :userId);';
+    $stmt = $db->prepare($sql);
+    //prefId, likeText, dislikeText, prefDate, laptopId, userId
+    $stmt->bindValue(':prefId', $prefId, PDO::PARAM_INT);
+    $stmt->bindValue(':likeText', $likeText, PDO::PARAM_STR);
+    $stmt->bindValue(':dislikeText', $dislikeText, PDO::PARAM_STR);
+    $stmt->bindValue(':prefDate', $prefDate, PDO::PARAM_STR);
+    $stmt->bindValue(':laptopId', $laptopId, PDO::PARAM_INT);
+    $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
 
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
+
+function removePreferedLaptop($laptopId) {
+    $db = get_db();
+    $sql = 'DELETE FROM userpreference WHERE laptopId = :laptopId';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':laptopId', $laptopId, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
+
+function displayPreferedLaptops($laptops) {
+    $dv = '<ul>';
+    foreach ($laptops as $laptop) {
+        $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
+        $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
+        $dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
+        $dv .= $laptop['laptopscreen'] . "\"";
+        //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
+        $dv .= '</li>';
+        $dv .= "<span onclick=" . removePreferedLaptop($laptop['laptopId']) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
+    }
+    $dv .= '</ul>';
+    return $dv;
+}
+function preferedLaptopsData($db) {
+    $query = 'SELECT * FROM userpreference';
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $laptops = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $laptops;
+}
+
+function laptopDetails($laptopId, $laptops) {
+    $dv =  $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
+    $dv .= $laptops[$laptopId]['laptopcpu'] . ' ' . $laptops[$laptopId]['laptopgpu'] . ' ';
+    $dv .= $laptops[$laptopId]['laptopram'] . "GB" . ' ' . $laptops[$laptopId]['laptopstorage'] . "TB ";
+    $dv .= $laptops[$laptopId]['laptopscreen'] . "\"";
+    //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
+    $dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
+}

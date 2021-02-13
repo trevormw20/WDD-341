@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 //laptops controller
 require_once 'laptop-model.php';
 require_once 'dbConnect.php';
@@ -11,6 +14,9 @@ if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
 }
 
+//sestion variables and how to access them.
+setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
+$clientFirstname;
 
 switch ($action) {
 
@@ -32,12 +38,32 @@ switch ($action) {
         exit;
         break;
 
+    case 'laptopDetails':
+        $laptopId = filter_input(INPUT_GET, 'laptopId', FILTER_SANITIZE_NUMBER_INT);
+        $laptopDetails = laptopDetails($laptopId, $laptops);
+        include 'laptopDetails.php';
+        exit;
+        break;
+
+    case 'addpref':
+        //fix laptopId
+        $prefId = 1;
+        $likeText = filter_input(INPUT_POST, 'likeText');
+        $dislikeText = filter_input(INPUT_POST, 'dislikeText');
+        $laptopId = filter_input(INPUT_POST, 'laptopId');
+        $userId = 1;
+        addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId);
+        break;
+
+
+    case 'deletepref':
+        break;
+
     default:
- 
+
         $laptops = laptopsData($db);
         $laptopDisplay = laptopsDisplay($laptops);
         include 'displayLaptops.php';
         exit;
         break;
 }
-
