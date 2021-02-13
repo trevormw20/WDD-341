@@ -143,4 +143,5 @@ function laptopDetails($laptopId, $laptops) {
     $dv .= $laptops[$laptopId]['laptopscreen'] . "\"";
     //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
     $dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
+    return $dv;
 }
