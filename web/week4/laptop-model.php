@@ -12,12 +12,15 @@ function laptopsDisplay($laptops)
         $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
         $dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
         $dv .= $laptop['laptopscreen'] . "\"";
-        $dv .= "<a href=/WDD-341/web/week4/?action=laptopDetails&laptopId=" . $laptop['laptopId'] . ">View details</a>";
+        $dv .= "<a href=/week4/?action=laptopDetails&laptopId=" . $laptop['laptopId'] . ">View details</a>";
         $dv .= '</li>';
     }
     $dv .= '</ul>';
     return $dv;
 }
+
+https://intense-springs-32154.herokuapp.com/week4/index.php
+https://intense-springs-32154.herokuapp.com/WDD-341/web/week4/?action=laptopDetails
 
 function laptopsData($db)
 {
