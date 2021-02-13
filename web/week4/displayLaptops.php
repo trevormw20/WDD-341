@@ -107,9 +107,9 @@
 			<p class="laptopsDisplay">
 				<?php echo $laptopDisplay;
 				//echo $laptops[0]['laptopmodel'];
-				//echo '<pre>';
-				//print_r($laptops);
-				//echo '</pre>';
+				echo '<pre>';
+				print_r($laptops);
+				echo '</pre>';
 				?>
 			</p>
 
