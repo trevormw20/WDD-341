@@ -39,7 +39,7 @@ switch ($action) {
         break;
 
     case 'laptopDetails':
-        $laptopId = filter_input(INPUT_GET, 'laptopId', FILTER_SANITIZE_NUMBER_INT);
+        $laptopId = filter_input(INPUT_GET, 'laptopid', FILTER_SANITIZE_NUMBER_INT);
         $laptopDetails = laptopDetails($laptopId, $laptops);
         include 'laptopDetails.php';
         exit;

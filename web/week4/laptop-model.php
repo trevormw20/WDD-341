@@ -12,8 +12,8 @@ function laptopsDisplay($laptops)
         $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
         $dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
         $dv .= $laptop['laptopscreen'] . "\"";
-        $dv .= "----" . $laptops['laptopId'] . "----";
-        $dv .= "<a href=/week4/?action=laptopDetails&laptopId=" . $laptop['laptopId'] . ">View details</a>";
+        $dv .= "----" . $laptops['laptopid'] . "----";
+        $dv .= "<a href=/week4/?action=laptopDetails&laptopId=" . $laptop['laptopid'] . ">View details</a>";
         $dv .= '</li>';
     }
     $dv .= '</ul>';
