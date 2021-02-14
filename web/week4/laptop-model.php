@@ -20,7 +20,7 @@ function laptopsDisplay($laptops)
 }
 
 function laptopDetails($laptopId, $laptops) {    
-    $dv =  $laptops[0]['laptopmaker'] . " " . $laptops[2]['laptopmaker'];
+    $dv =  $laptopId . " -- " . $laptops[0]['laptopmaker'] . " " . $laptops[2]['laptopmaker'];
     //$dv =  $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
     //$dv .= $laptops[$laptopId]['laptopcpu'] . ' ' . $laptops[$laptopId]['laptopgpu'] . ' ';
     //$dv .= $laptops[$laptopId]['laptopram'] . "GB" . ' ' . $laptops[$laptopId]['laptopstorage'] . "TB ";
