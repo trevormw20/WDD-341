@@ -41,7 +41,7 @@ switch ($action) {
     case 'laptopDetails':
         $laptops = laptopsData($db);
         $laptopId = filter_input(INPUT_GET, 'laptopid', FILTER_SANITIZE_NUMBER_INT);
-        $laptopDetails = laptopDetails($laptopId, $laptops[0]);
+        $laptopDetails = laptopDetails($laptopId, $laptops[$laptopId]);
         include 'laptopDetails.php';
         exit;
         break;
