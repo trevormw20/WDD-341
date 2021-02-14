@@ -10,13 +10,17 @@
     <div class="sidesSpacer">
         <h1 class="redBanner">Week 6 Prove Assignment</h1>
 
+        <br><br>
+        
         <p class="laptopsDisplay">
         <?php echo $laptopDetails; ?>
 
         <br>
 
         <form action="index.php" method="post" id="addpref">
-        <textarea name="likeText" id="likeText"></textarea>
+        <h3>What you like:</h3>
+        <textarea name="likeText" id="likeText"></textarea><br><br>
+        <h3>What you dislike:</h3>
         <textarea name="dislikeText" id="dislikeText"></textarea>
 
         <input type="submit" name="submit" value="Add Preference" id="formButton">
