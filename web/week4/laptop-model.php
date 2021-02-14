@@ -136,7 +136,7 @@ function preferedLaptopsData($db) {
 }
 
 function laptopDetails($laptopId, $laptops) {
-    $dv = "<?php echo '<pre>'; print_r($laptops); echo '</pre>'; ?>";
+    $dv = "<?php print_r($laptops); ?>";
     
     
     //$dv =  $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
