@@ -11,18 +11,13 @@
         <h1 class="redBanner">Week 6 Prove Assignment</h1>
 
         <p class="laptopsDisplay">
-
-        <h1>test 2</h1>
-        <?php print_r($laptops[0]); ?>
-
-        <h1>test 6</h1>
         <?php echo $laptopDetails; ?>
 
         <br>
 
         <form action="index.php" method="post" id="addpref">
-        <textarea name="likeText" id="likeText">
-        <textarea name="dislikeText" id="dislikeText">
+        <textarea name="likeText" id="likeText"></textarea>
+        <textarea name="dislikeText" id="dislikeText"></textarea>
 
         <input type="submit" name="submit" value="Add Preference" id="formButton">
         <input type="hidden" name="action" value="addpref">";
