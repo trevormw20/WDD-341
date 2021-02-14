@@ -39,6 +39,7 @@ switch ($action) {
         break;
 
     case 'laptopDetails':
+        $laptops = laptopsData($db);
         $laptopId = filter_input(INPUT_GET, 'laptopid', FILTER_SANITIZE_NUMBER_INT);
         $laptopDetails = laptopDetails($laptopId, $laptops);
         include 'laptopDetails.php';
