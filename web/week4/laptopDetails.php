@@ -11,7 +11,7 @@
         <h1 class="redBanner">Week 6 Prove Assignment</h1>
 
         <br><br>
-        
+
         <p class="laptopsDisplay">
         <?php echo $laptopDetails; ?>
 
@@ -24,7 +24,7 @@
         <textarea name="dislikeText" id="dislikeText"></textarea>
 
         <input type="submit" name="submit" value="Add Preference" id="formButton">
-        <input type="hidden" name="action" value="addpref">";
+        <input type="hidden" name="action" value="addpref">
         <input type="hidden" name="laptopId" value=><br><br>
 		</p>
 
