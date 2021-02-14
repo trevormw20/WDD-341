@@ -11,10 +11,6 @@
         <h1 class="redBanner">Week 6 Prove Assignment</h1>
 
         <p class="laptopsDisplay">
-        <?php echo '<pre>';
-				print_r($laptops);
-				echo '</pre>';
-                ?>
         <?php echo $laptopDetails; ?>
 
         <br>
