@@ -82,7 +82,7 @@ laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) V
 
 INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
 laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
-('20', 'ASUS', 'SCAR17', 'TEST SPECS', '3080', 'RYZEN9', '32', '1000', '17', 'NONE', 'NONE', '2699', '30', '2021-01-18', '8');
+('21', 'ASUS', 'SCAR17', 'TEST SPECS', '3080', 'RYZEN9', '32', '1000', '17', 'NONE', 'NONE', '2699', '30', '2021-01-18', '8');
 
 
 
