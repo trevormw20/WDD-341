@@ -11,16 +11,9 @@
         <h1 class="redBanner">Week 6 Prove Assignment</h1>
 
         <p class="laptopsDisplay">
-        <h1>test 1</h1>
-        <?php print_r($laptops); ?>
+
         <h1>test 2</h1>
         <?php print_r($laptops[0]); ?>
-        <h1>test 3</h1>
-        <?php print_r($laptops[0]['laptopMaker']); ?>
-        <h1>test 4</h1>
-        <?php print_r($laptops['laptopMaker']); ?>
-        <h1>test 5</h1>
-        <?php print_r($laptops[3]['laptopMaker']); ?>
 
         <h1>test 6</h1>
         <?php echo $laptopDetails; ?>
