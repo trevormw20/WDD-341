@@ -19,6 +19,16 @@ function laptopsDisplay($laptops)
     return $dv;
 }
 
+function laptopDetails($laptopId, $laptops) {    
+    $dv =  $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
+    $dv .= $laptops[$laptopId]['laptopcpu'] . ' ' . $laptops[$laptopId]['laptopgpu'] . ' ';
+    $dv .= $laptops[$laptopId]['laptopram'] . "GB" . ' ' . $laptops[$laptopId]['laptopstorage'] . "TB ";
+    $dv .= $laptops[$laptopId]['laptopscreen'] . "\"";
+    //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
+    $dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
+    return $dv;
+}
+
 function laptopsData($db)
 {
     $query = 'SELECT * FROM laptops';
@@ -135,15 +145,3 @@ function preferedLaptopsData($db) {
     return $laptops;
 }
 
-function laptopDetails($laptopId, $laptops) {
-    $dv = "<?php print_r($laptops); ?>";
-    
-    
-    //$dv =  $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
-    //$dv .= $laptops[$laptopId]['laptopcpu'] . ' ' . $laptops[$laptopId]['laptopgpu'] . ' ';
-    //$dv .= $laptops[$laptopId]['laptopram'] . "GB" . ' ' . $laptops[$laptopId]['laptopstorage'] . "TB ";
-    //$dv .= $laptops[$laptopId]['laptopscreen'] . "\"";
-    ////$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
-    //$dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
-    return $dv;
-}
