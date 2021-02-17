@@ -34,7 +34,7 @@ function laptopDetails($laptopId, $laptops) {
     $dv .= "<h3>What you like:</h3>";
     $dv .= "<textarea name=`likeText` id=`likeText`></textarea><br><br>";
     $dv .= "<h3>What you dislike:</h3>";
-    $dv .= "<textarea name=`dislikeText` id=`dislikeText`></textarea><br><br>";
+    $dv .= `<textarea name="dislikeText" id="dislikeText"></textarea><br><br>`;
 
     $dv .= `<input type="submit" name="submit" value="Add Preference" id="formButton">`;
     $dv .= `<input type="hidden" name="action" value="addpref">`;
