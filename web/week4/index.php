@@ -55,7 +55,7 @@ switch ($action) {
         $laptopId = filter_input(INPUT_GET, 'laptopId');
         $userId = 1;
         //addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId);
-        $message = "<p class='notice'>Sorry, no vehicle could be found.</p>";
+        $message = "<p class='notice'>" . $prefId . "</p>";
         include 'laptopDetails.php';
         break;
 
