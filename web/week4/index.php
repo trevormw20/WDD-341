@@ -50,9 +50,9 @@ switch ($action) {
     case 'addpref':
         //fix laptopId
         $prefId = 1;
-        $likeText = filter_input(INPUT_POST, 'likeText');
-        $dislikeText = filter_input(INPUT_POST, 'dislikeText');
-        $laptopId = filter_input(INPUT_POST, 'laptopId');
+        $likeText = filter_input(INPUT_GET, 'likeText');
+        $dislikeText = filter_input(INPUT_GET, 'dislikeText');
+        $laptopId = filter_input(INPUT_GET, 'laptopId');
         $userId = 1;
         addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId);
         include 'displayLaptops.php';
