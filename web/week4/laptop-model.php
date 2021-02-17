@@ -28,6 +28,19 @@ function laptopDetails($laptopId, $laptops) {
     $dv .= $laptops[$laptopId]['laptopram'] . "GB" . ' ' . $laptops[$laptopId]['laptopstorage'] . "TB ";
     $dv .= $laptops[$laptopId]['laptopscreen'] . "\" ";
     $dv .= $laptops[$laptopId]['laptopSpecs'];
+
+
+    $dv .= "<form action=`index.php` method=`post` id=`addpref`>";
+    $dv .= "<h3>What you like:</h3>";
+    $dv .= "<textarea name=`likeText` id=`likeText`></textarea><br><br>";
+    $dv .= "<h3>What you dislike:</h3>";
+    $dv .= "<textarea name=`dislikeText` id=`dislikeText`></textarea><br><br>";
+
+    $dv .= "<input type=`submit` name=`submit` value=`Add Preference` id=`formButton`>";
+    $dv .= "<input type=`hidden` name=`action` value=`addpref`>";
+    $dv .= "<input type=`hidden` name=`laptopId` value=" . $laptopId . "><br><br>";
+
+
     //$dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
     return $dv;
 }
