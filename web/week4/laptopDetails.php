@@ -21,11 +21,11 @@
         <h3>What you like:</h3>
         <textarea name="likeText" id="likeText"></textarea><br><br>
         <h3>What you dislike:</h3>
-        <textarea name="dislikeText" id="dislikeText"></textarea><br>
+        <textarea name="dislikeText" id="dislikeText"></textarea><br><br>
 
         <input type="submit" name="submit" value="Add Preference" id="formButton">
         <input type="hidden" name="action" value="addpref">
-        <input type="hidden" name="laptopId" value=><br><br>
+        <input type="hidden" name="laptopId" value=<?php $laptopId ?>><br><br>
 		</p>
 
 		</main>
