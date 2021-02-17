@@ -55,7 +55,17 @@ switch ($action) {
         $laptopId = filter_input(INPUT_GET, 'laptopId');
         $userId = 1;
         //addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId);
-        $message = "<p class='notice'>" . $prefId . "</p>";
+        //************************************************
+        /**********************************************  */
+        //************************************************
+        /**********************************************  */
+        //////**************ADD ALL INFRORMATION INTO MESSAGE
+        //************************************************
+        /**********************************************  */
+        //************************************************
+        /**********************************************  */
+        $message = "<p class='notice'>" . $prefId . "  liketext: " .  $likeText . " dislike text: " .
+        $dislikeText . "  laptopid: " . $laptopId . "  user id: " . $userId . "</p>";
         include 'laptopDetails.php';
         break;
 
