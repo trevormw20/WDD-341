@@ -38,7 +38,7 @@ function laptopDetails($laptopId, $laptops) {
 
     $dv .= "<input type=" . "submit" . "name=" . "submit" . " value=" . "Add Preference" . " id=" . "formButton" .">";
     $dv .= "<input type=`hidden` name=`action` value=`addpref`>";
-    $dv .= "<input type=`hidden` name=`laptopId` value=" . $laptopId . "></from><br><br>";
+    $dv .= "<input type=`hidden` name=`laptopId` value=" . $laptopId . "></form><br><br>";
 
 
     //$dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
