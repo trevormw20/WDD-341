@@ -48,7 +48,6 @@ switch ($action) {
         break;
 
     case 'addpref':
-        //fix laptopId
         $prefId = 1;
         $likeText = filter_input(INPUT_POST, 'likeText');
         $dislikeText = filter_input(INPUT_POST, 'dislikeText');
