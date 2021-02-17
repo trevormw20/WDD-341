@@ -1,6 +1,5 @@
 <?php
 
-
 /* * ********************************
 *  Functions for default display
 * ********************************* */
@@ -19,6 +18,9 @@ function laptopsDisplay($laptops)
     return $dv;
 }
 
+/* * ********************************
+*  Display the details for a specific laptop
+* ********************************* */
 function laptopDetails($laptopId, $laptops) {    
     //$dv =  $laptopId . " -- " . $laptops[0]['laptopmaker'] . " " . $laptops[2]['laptopmaker'];
     $dv =  $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
@@ -30,6 +32,9 @@ function laptopDetails($laptopId, $laptops) {
     return $dv;
 }
 
+/* * ********************************
+*  Get all information for every laptop
+* ********************************* */
 function laptopsData($db)
 {
     $query = 'SELECT * FROM laptops';
@@ -40,7 +45,10 @@ function laptopsData($db)
     return $laptops;
 }
 
-//filtered laptop display
+/* * ********************************
+*  Filtered laptop display
+* ********************************* */
+
 function filterLaptops($filter, $db)
 {
 
@@ -93,6 +101,9 @@ function filterLaptops($filter, $db)
     return $laptops;
 }
 
+/* * ********************************
+*  Adds prefered laptop to database list
+* ********************************* */
 function addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId) {
     $prefDate = date("Y-m-d H:i:s");
     $db = get_db();
@@ -112,6 +123,9 @@ function addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId)
     return $rowsChanged;
 }
 
+/* * ********************************
+*  Removes prefered laptop from database list
+* ********************************* */
 function removePreferedLaptop($laptopId) {
     $db = get_db();
     $sql = 'DELETE FROM userpreference WHERE laptopId = :laptopId';
@@ -123,6 +137,9 @@ function removePreferedLaptop($laptopId) {
     return $rowsChanged;
 }
 
+/* * ********************************
+*  Display basic information on all laptops
+* ********************************* */
 function displayPreferedLaptops($laptops) {
     $dv = '<ul>';
     foreach ($laptops as $laptop) {
@@ -137,6 +154,10 @@ function displayPreferedLaptops($laptops) {
     $dv .= '</ul>';
     return $dv;
 }
+
+/* * ********************************
+*  Get all data about prefered laptops
+* ********************************* */
 function preferedLaptopsData($db) {
     $query = 'SELECT * FROM userpreference';
     $stmt = $db->prepare($query);
