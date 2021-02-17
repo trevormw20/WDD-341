@@ -52,7 +52,7 @@ switch ($action) {
         $likeText = filter_input(INPUT_POST, 'likeText');
         $dislikeText = filter_input(INPUT_POST, 'dislikeText');
         $laptopTest =$laptopId;
-        $laptopId = filter_input(INPUT_GET, 'laptopId');
+        $laptopId = filter_input(INPUT_POST, 'laptopId');
         $userId = 1;
         //addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId);
         //************************************************
