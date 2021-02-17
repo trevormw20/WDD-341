@@ -106,8 +106,9 @@ function filterLaptops($filter, $db)
 * ********************************* */
 function addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId) {
     $prefDate = date("Y-m-d H:i:s");
+    $userId = 1;
     $db = get_db();
-    $sql = 'INSERT INTO reviews (prefId, likeText, dislikeText, prefDate, laptopId, userId) VALUES (:prefId, :likeText, :dislikeText, :prefDate, :laptopId, :userId);';
+    $sql = 'INSERT INTO userpreference (prefId, likeText, dislikeText, prefDate, laptopId, userId) VALUES (:prefId, :likeText, :dislikeText, :prefDate, :laptopId, :userId);';
     $stmt = $db->prepare($sql);
     //prefId, likeText, dislikeText, prefDate, laptopId, userId
     $stmt->bindValue(':prefId', $prefId, PDO::PARAM_INT);
