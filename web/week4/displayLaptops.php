@@ -8,6 +8,11 @@
 
 <body>
 	<div class="sidesSpacer">
+		<?php
+		if (isset($nav)) {
+			echo $nav;
+		}
+		?>
 		<h1 class="redBanner">Week 4 Prove Assignment</h1>
 		<main>
 

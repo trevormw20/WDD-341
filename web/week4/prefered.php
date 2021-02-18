@@ -1,25 +1,35 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD341 week 4</title>
+    <meta name="description" content="Trevor Williams week 4 for WDD 341">
+    <link rel="stylesheet" type="text/css" href="/css/style.css?version=3">
+</head>
 
-<main>
+<body>
+    <div class="sidesSpacer">
+        <?php
+            if (isset($nav)) {
+                echo $nav;
+            }
+        ?>
+        <h1 class="redBanner">Week 6 Prove Assignment</h1>
 
-	<h3>Account Management</h3>
-	<p>Use this link to update account information.</p>
+        <br>
+        <?php
+            if (isset($message)) {
+                echo $message;
+            }
+        ?>
 
-	<a href="/phpmotors/accounts/?action=updateAccountView">Update Account Information</a>
-	<br>
-	<h3>Manage Your Product Reviews</h3>
-	<?php if (isset($reviewsDisplay)) {   
-		echo $reviewsDisplay;
-	} ?>
-	<br>
-	<?php
-	if ($_SESSION['clientData']['clientLevel'] > 1) {
-		echo "<h3>Inventory Management</h3>
-		<p>Use this link to manage the inventory.</p><p><a href= '/phpmotors/vehicles'>Vehicle Controller</a></p>";
-	}
-	?>
-</main>
+        <br><br>
+
+        <p class="displayPrefered">
+            <?php echo $displayPrefered; ?>
+            <br>
+        <p>
 
 
+    </div>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/footer.php'; ?>
+</body>

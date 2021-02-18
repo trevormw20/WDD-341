@@ -8,24 +8,28 @@
 
 <body>
     <div class="sidesSpacer">
+        <?php
+            if (isset($nav)) {
+                echo $nav;
+            }
+        ?>
         <h1 class="redBanner">Week 6 Prove Assignment</h1>
 
         <br>
         <?php
-        if (isset($message)) {
-            echo $message;
-        }
+            if (isset($message)) {
+                echo $message;
+            }
         ?>
 
         <br><br>
 
         <p class="laptopsDisplay">
             <?php echo $laptopDetails; ?>
-
             <br>
         <p>
 
-        
+
     </div>
 
 </body>

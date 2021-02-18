@@ -180,3 +180,17 @@ function preferedLaptopsData($db) {
     return $laptops;
 }
 
+
+
+/* * ********************************
+*  Displays links for navigation
+* ********************************* */
+function displayNavigation() {
+    $navLinks = "<ul>";
+    $navLinks .= "<li><a href='/index.php'>Home</a></li>";
+    $navLinks .= "<li><a href='index.php'>Laptops</a></li>";
+    $navLinks .= "<li><a href='index.php?action=prefered'>Prefered Laptops</a></li>";
+    $navLinks .= "</ul>";
+
+    return $navLinks;
+}

@@ -39,6 +39,7 @@ switch ($action) {
         break;
 
     case 'laptopDetails':
+        $nav = displayNavigation();
         $laptops = laptopsData($db);
         $laptopId = filter_input(INPUT_GET, 'laptopId', FILTER_SANITIZE_STRING);
         $laptopId--;
@@ -54,18 +55,6 @@ switch ($action) {
         $laptopId = filter_input(INPUT_POST, 'laptopId');
         $userId = 1;
         addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId);
-        //************************************************
-        /**********************************************  */
-        //************************************************
-        /**********************************************  */
-        //////************** fix laptop id not being sent here
-        //************************************************
-        /**********************************************  */
-        //************************************************
-        /**********************************************  */
-        //$message = "<p class='notice'>" . $prefId . "  ----liketext---- " .  $likeText . " dislike text: " .
-        //$dislikeText . "  laptopid: " . $laptopId . "  user id: " . $userId . "  -- laptop test: ". 
-        //$laptopTest . "</p>";
         include 'laptopDetails.php';
         break;
 
@@ -73,8 +62,16 @@ switch ($action) {
     case 'deletepref':
         break;
 
-    default:
+        case 'displayPref':
+            $nav = displayNavigation();
+            $laptops = preferedLaptopsData($db);
+            $displayPrefered = displayPreferedLaptops($laptops);
+            include 'prefered.php';
+            exit;
+            break;
 
+    default:
+        $nav = displayNavigation();
         $laptops = laptopsData($db);
         $laptopDisplay = laptopsDisplay($laptops);
         include 'displayLaptops.php';
