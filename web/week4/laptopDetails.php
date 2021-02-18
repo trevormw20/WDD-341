@@ -30,9 +30,6 @@
         <p>
 
 
-        <p>size of:  </p>
-
-
     </div>
 
 </body>

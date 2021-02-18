@@ -168,8 +168,9 @@ function displayPreferedLaptops($prefLaptops, $laptops) {
         $dv .= "<p>Dislike: " . $prefLaptop['disliketext'] . "</p>";
         $dv .= "<p>Preference Date: " . $prefLaptop['predate'] . "</p>";
         //$dv .= "<p>laptop id in pref: " . $id . "</p>";
-        $dv .= '</li>';
         $dv .= "<span onclick=" . removePreferedLaptop($id) . " class=\"preferedLaptop\">Add to prefered laptop</span><br><br>";
+        $dv .= '</li>';
+        
     }
     $dv .= '</ul>';
 
