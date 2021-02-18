@@ -49,7 +49,7 @@ switch ($action) {
         break;
 
     case 'addpref':
-        $prefId = 1;
+        $prefId = 2;
         $likeText = filter_input(INPUT_POST, 'likeText');
         $dislikeText = filter_input(INPUT_POST, 'dislikeText');
         $laptopId = filter_input(INPUT_POST, 'laptopId');
