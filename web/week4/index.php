@@ -58,6 +58,7 @@ switch ($action) {
         $userId = 1;
         addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId);
         include 'laptopDetails.php';
+        exit;
         break;
 
 
@@ -65,6 +66,7 @@ switch ($action) {
         $laptopId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
         removePreferedLaptop($laptopId);
         include 'laptopDetails.php';
+        exit;
         break;
 
         case 'displayPref':
