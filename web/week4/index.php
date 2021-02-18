@@ -51,7 +51,7 @@ switch ($action) {
     case 'addpref':
         $prefLaptops = preferedLaptopsData($db);
         $prefId = sizeof($prefLaptops[0]["prefid"]);
-        $prefId+2;
+        $prefId += 2;
         $likeText = filter_input(INPUT_POST, 'likeText');
         $dislikeText = filter_input(INPUT_POST, 'dislikeText');
         $laptopId = filter_input(INPUT_POST, 'laptopId');
