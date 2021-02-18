@@ -159,16 +159,17 @@ function displayPreferedLaptops($prefLaptops, $laptops) {
     foreach ($prefLaptops as $prefLaptop) {
         $id = $prefLaptop['laptopid'];
         $dv .= '<li>' . $laptops[$id]['laptopmaker'] . ' ' . $laptops[$id]['laptopmodel'] . ' ';
-        //$dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
-        //$dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
-        //$dv .= $laptop['laptopscreen'] . "\"";
-        ////$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
-        $dv .= '</li>';
+        $dv .= $laptops[$id]['laptopcpu'] . ' ' . $laptops[$id]['laptopgpu'] . ' ';
+        $dv .= $laptops[$id]['laptopram'] . "GB" . ' ' . $laptops[$id]['laptopstorage'] . "TB ";
+        $dv .= $laptops[$id]['laptopscreen'] . "\"";
+        //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
+        $dv .= $prefLaptop['']
+        //$dv .= '</li>';
         //$dv .= "<span onclick=" . removePreferedLaptop($laptop['laptopId']) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
     }
     $dv .= '</ul>';
 
-    //$dv = "<pre>" . print_r($laptops[0]) . "</pre>";
+    $dv = "<pre>" . print_r($laptops[0]) . "</pre>";
 
     return $dv;
 }
