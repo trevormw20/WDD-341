@@ -168,7 +168,20 @@ function displayPreferedLaptops($prefLaptops, $laptops) {
         $dv .= "<p>Dislike: " . $prefLaptop['disliketext'] . "</p>";
         $dv .= "<p>Preference Date: " . $prefLaptop['predate'] . "</p>";
         //$dv .= "<p>laptop id in pref: " . $id . "</p>";
-        $dv .= "<a href=/WDD-341/web/week4/?action=deletepref&id=" . $id . ">Remove</a>";
+
+
+//************************************************
+        /**********************************************  */
+        //************************************************
+        /**********************************************  */
+        //////**************fix link destination below
+        //************************************************
+        /**********************************************  */
+        //************************************************
+        /**********************************************  */
+
+
+        $dv .= "<a href=/week4/?action=deletepref&id=" . $id . ">Remove</a>";
         //$dv .= "<button onclick=" . removePreferedLaptop($id) . " class=\"preferedLaptop\">Add to prefered laptop</span><br><br>";
         $dv .= '</li><br>';
         
