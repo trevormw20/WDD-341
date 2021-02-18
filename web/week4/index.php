@@ -64,8 +64,9 @@ switch ($action) {
 
         case 'displayPref':
             $nav = displayNavigation();
-            $laptops = preferedLaptopsData($db);
-            $displayPrefered = displayPreferedLaptops($laptops);
+            $laptops = laptopsData($db);
+            $prefLaptops = preferedLaptopsData($db);
+            $displayPrefered = displayPreferedLaptops($prefLaptops, $laptops);
             include 'prefered.php';
             exit;
             break;

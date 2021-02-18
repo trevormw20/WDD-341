@@ -153,21 +153,22 @@ function removePreferedLaptop($laptopId) {
 /* * ********************************
 *  Display basic information on all laptops
 * ********************************* */
-function displayPreferedLaptops($laptops) {
-    /*
+function displayPreferedLaptops($prefLaptops, $laptops) {
+    
     $dv = '<ul>';
-    foreach ($laptops as $laptop) {
-        $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
-        $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
-        $dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
-        $dv .= $laptop['laptopscreen'] . "\"";
-        //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
+    foreach ($prefLaptops as $preflaptop) {
+        $id = $prefLaptops['laptopid'];
+        $dv .= '<li>' . $laptops[0][$id]['laptopmaker'] . ' ' . $laptops[0][$id]['laptopmodel'] . ' ';
+        //$dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
+        //$dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
+        //$dv .= $laptop['laptopscreen'] . "\"";
+        ////$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
         $dv .= '</li>';
-        $dv .= "<span onclick=" . removePreferedLaptop($laptop['laptopId']) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
+        //$dv .= "<span onclick=" . removePreferedLaptop($laptop['laptopId']) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
     }
     $dv .= '</ul>';
-*/
-    $dv = "<pre>" . print_r($laptops[0]) . "</pre>";
+
+    //$dv = "<pre>" . print_r($laptops[0]) . "</pre>";
 
     return $dv;
 }
