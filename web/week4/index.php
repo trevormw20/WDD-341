@@ -55,7 +55,7 @@ switch ($action) {
         $laptopId = filter_input(INPUT_POST, 'laptopId');
         $userId = 1;
         addPreferedLaptop($prefId, $likeText, $dislikeText, $laptopId, $userId);
-        include 'index.php';
+        include 'laptopDetails.php';
         break;
 
 
