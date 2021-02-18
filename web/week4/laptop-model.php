@@ -163,7 +163,7 @@ function displayPreferedLaptops($prefLaptops, $laptops) {
         $dv .= $laptops[$id]['laptopram'] . "GB" . ' ' . $laptops[$id]['laptopstorage'] . "TB ";
         $dv .= $laptops[$id]['laptopscreen'] . "\"";
         //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
-        $dv .= $prefLaptop['']
+        //$dv .= $prefLaptop['']
         //$dv .= '</li>';
         //$dv .= "<span onclick=" . removePreferedLaptop($laptop['laptopId']) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
     }
