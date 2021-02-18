@@ -154,6 +154,7 @@ function removePreferedLaptop($laptopId) {
 *  Display basic information on all laptops
 * ********************************* */
 function displayPreferedLaptops($laptops) {
+    /*
     $dv = '<ul>';
     foreach ($laptops as $laptop) {
         $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
@@ -165,6 +166,9 @@ function displayPreferedLaptops($laptops) {
         $dv .= "<span onclick=" . removePreferedLaptop($laptop['laptopId']) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
     }
     $dv .= '</ul>';
+*/
+    $dv = "<pre>" . print_r($laptops) . "</pre>";
+
     return $dv;
 }
 
