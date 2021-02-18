@@ -30,7 +30,7 @@
         <p>
 
 
-        <p>size of: <?php echo sizeof($prefLaptops[0]["prefid"]) ?> </p>
+        <p>size of:  </p>
 
 
     </div>
