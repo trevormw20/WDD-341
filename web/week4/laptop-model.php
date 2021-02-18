@@ -41,7 +41,7 @@ function laptopDetails($laptopId, $laptops) {
     $dv .= "<input type=\"hidden\" name=\"laptopId\" value=" . $laptopId . "></form><br><br>";
 
 
-    $dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
+    //$dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
     return $dv;
 }
 
