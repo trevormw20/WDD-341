@@ -162,12 +162,14 @@ function displayPreferedLaptops($prefLaptops, $laptops) {
         $dv .= $laptops[$id]['laptopcpu'] . ' ' . $laptops[$id]['laptopgpu'] . ' ';
         $dv .= $laptops[$id]['laptopram'] . "GB" . ' ' . $laptops[$id]['laptopstorage'] . "TB ";
         $dv .= $laptops[$id]['laptopscreen'] . "\"";
+       // $dv .= "<p>laptop id: " . $laptops[$id]['laptopmaker'] . "</p>";
         //$dv .= "<a href=/WDD-341/web/week4/?action=editReview&reviewId=" . $laptops['reviewId'] . ">Edit</a>";
         $dv .= "<p>Preferences: " . $prefLaptop['liketext'] . "</p>";
         $dv .= "<p>Dislike: " . $prefLaptop['disliketext'] . "</p>";
         $dv .= "<p>Preference Date: " . $prefLaptop['predate'] . "</p>";
+        //$dv .= "<p>laptop id in pref: " . $id . "</p>";
         $dv .= '</li>';
-        $dv .= "<span onclick=" . removePreferedLaptop($id) . " class=`preferedLaptop`>Add to prefered laptop</span><br><br>";
+        $dv .= "<span onclick=" . removePreferedLaptop($id) . " class=\"preferedLaptop\">Add to prefered laptop</span><br><br>";
     }
     $dv .= '</ul>';
 
