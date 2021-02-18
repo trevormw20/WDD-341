@@ -169,7 +169,7 @@ function displayPreferedLaptops($prefLaptops, $laptops) {
     }
     $dv .= '</ul>';
 
-    $dv = "<pre>" . print_r($laptops[0]) . "</pre>";
+    $dv = "<pre>" . print_r($prefLaptops[0]) . "</pre>";
 
     return $dv;
 }
