@@ -29,7 +29,11 @@
             <br>
         <p>
 
-        <p>size of: <?php echo sizeof($prefLaptops[0]) ?> </p>
+        <p>size of 1: <?php echo sizeof($prefLaptops) ?> </p>
+
+        <p>size of 2 : <?php echo sizeof($prefLaptops[0]) ?> </p>
+
+        <p>size of 3 : <?php echo sizeof($prefLaptops[0]['prefid']) ?> </p>
 
     </div>
 
