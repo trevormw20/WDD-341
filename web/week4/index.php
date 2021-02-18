@@ -62,6 +62,9 @@ switch ($action) {
 
 
     case 'deletepref':
+        $laptopId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
+        removePreferedLaptop($laptopId);
+        include 'laptopDetails.php';
         break;
 
         case 'displayPref':
