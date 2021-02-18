@@ -156,9 +156,9 @@ function removePreferedLaptop($laptopId) {
 function displayPreferedLaptops($prefLaptops, $laptops) {
     
     $dv = '<ul>';
-    foreach ($prefLaptops as $preflaptop) {
-        $id = $prefLaptops['laptopid'];
-        $dv .= '<li>' . $laptops[0][$id]['laptopmaker'] . ' ' . $laptops[0][$id]['laptopmodel'] . ' ';
+    foreach ($prefLaptops as $prefLaptop) {
+        $id = $prefLaptop['laptopid'];
+        $dv .= '<li>' . $laptops[$id]['laptopmaker'] . ' ' . $laptops[$id]['laptopmodel'] . ' ';
         //$dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
         //$dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
         //$dv .= $laptop['laptopscreen'] . "\"";
