@@ -320,17 +320,17 @@ main {
 }
 
 .laptopsList:nth-child(even) {
-color: cadetblue;
+    background-color: cadetblue;
 }
 
 #likeText {
-color: rgb(112, 182, 112);
+background-color: rgb(112, 182, 112);
 min-width: 300px;
 min-height: 125px;
 }
 
 #dislikeText {
-color: rgb(161, 114, 114);
+    background-color: rgb(161, 114, 114);
 min-width: 300px;
 min-height: 125px;
 }
