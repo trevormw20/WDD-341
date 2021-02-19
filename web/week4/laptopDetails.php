@@ -13,7 +13,7 @@
                 echo $nav;
             }
         ?>
-        <h1 class="blueBanner">Prefered Laptops</h1>
+        <h1 class="greenBanner">Laptop Details</h1>
 
         <br>
         <?php

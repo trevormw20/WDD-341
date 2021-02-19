@@ -13,7 +13,7 @@
                 echo $nav;
             }
         ?>
-        <h1 class="redBanner">Week 6 Prove Assignment</h1>
+        <h1 class="blueBanner">Prefered Laptops</h1>
 
         <br>
         <?php
