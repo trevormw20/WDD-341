@@ -211,7 +211,7 @@ function preferedLaptopsData($db) {
 *  Displays links for navigation
 * ********************************* */
 function displayNavigation() {
-    $navLinks = "<ul>";
+    $navLinks = "<ul class=\"laptopNav\">";
     $navLinks .= "<li><a href='/index.php'>Home</a></li>";
     $navLinks .= "<li><a href='index.php'>Laptops</a></li>";
     $navLinks .= "<li><a href='index.php?action=displayPref'>Prefered Laptops</a></li>";

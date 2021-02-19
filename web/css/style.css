@@ -320,8 +320,9 @@ main {
 }
 
 .laptopsList li {
-    background-color: cadetblue;
+    background-color: rgb(191, 218, 219);
     padding: 2em;
+    list-style-type: none;
 }
 
 #likeText {
@@ -337,4 +338,26 @@ min-height: 125px;
 }
 #detailsForm {
     padding-left: 1em;
+}
+
+.laptopNav {
+    list-style-type: none;
+	background-color: rgb(150, 0, 0);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.laptopNav li {
+    float: left;
+}
+
+.laptopNav li a {
+    display: block;
+	text-decoration: none;
+	color: #ffffff;
+	text-align: center;
+	padding: 1em 0.3em;
+	font-weight: 700;
 }
