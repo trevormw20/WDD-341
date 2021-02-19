@@ -5,7 +5,7 @@
 * ********************************* */
 function laptopsDisplay($laptops)
 {
-    $dv = '<ul id="laptopsList">';
+    $dv = "<ul class=\"laptopsList\">";
     foreach ($laptops as $laptop) {
         $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
         $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
@@ -155,7 +155,7 @@ function removePreferedLaptop($laptopId) {
 * ********************************* */
 function displayPreferedLaptops($prefLaptops, $laptops) {
     
-    $dv = '<ul>';
+    $dv = '<ul class="laptopsList">';
     foreach ($prefLaptops as $prefLaptop) {
         $id = $prefLaptop['laptopid'];
         $dv .= '<li>' . $laptops[$id]['laptopmaker'] . ' ' . $laptops[$id]['laptopmodel'] . ' ';

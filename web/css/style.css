@@ -290,7 +290,7 @@ body {
 
 .laptopsDisplay {
 	float: right;
-	
+	padding-left: 1em;
 }
 
 .filterForm {
@@ -319,18 +319,18 @@ main {
     border-radius: 0;
 }
 
-#laptopsList li:nth-child(even) {
+.laptopsList:nth-child(even) {
 color: cadetblue;
 }
 
 #likeText {
 color: rgb(112, 182, 112);
 min-width: 300px;
-min-height: 200px;
+min-height: 125px;
 }
 
 #dislikeText {
 color: rgb(161, 114, 114);
 min-width: 300px;
-min-height: 200px;
+min-height: 125px;
 }
