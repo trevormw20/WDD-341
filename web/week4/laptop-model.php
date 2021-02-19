@@ -5,7 +5,7 @@
 * ********************************* */
 function laptopsDisplay($laptops)
 {
-    $dv = "<ul class=\"laptopsList\">";
+    $dv = "<ul >";
     foreach ($laptops as $laptop) {
         $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
         $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';

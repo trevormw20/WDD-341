@@ -321,6 +321,7 @@ main {
 
 .laptopsList li {
     background-color: cadetblue;
+    padding: 2em;
 }
 
 #likeText {
