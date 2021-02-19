@@ -29,8 +29,6 @@
             <br>
         <p>
 
-        <p>size of 1: <?php echo sizeof($prefLaptops) ?> </p>
-
     </div>
 
 </body>
