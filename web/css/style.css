@@ -334,3 +334,6 @@ color: rgb(161, 114, 114);
 min-width: 300px;
 min-height: 125px;
 }
+#detailsForm {
+    padding-left: 1em;
+}

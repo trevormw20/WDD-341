@@ -23,7 +23,7 @@ function laptopsDisplay($laptops)
 * ********************************* */
 function laptopDetails($laptopId, $laptops) {    
     //$dv =  $laptopId . " -- " . $laptops[0]['laptopmaker'] . " " . $laptops[2]['laptopmaker'];
-    $dv =  "<p>" . $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
+    $dv =  "<div id=\"detailsForm\"><p>" . $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
     $dv .= $laptops[$laptopId]['laptopcpu'] . ' ' . $laptops[$laptopId]['laptopgpu'] . ' ';
     $dv .= $laptops[$laptopId]['laptopram'] . "GB" . ' ' . $laptops[$laptopId]['laptopstorage'] . "TB ";
     $dv .= $laptops[$laptopId]['laptopscreen'] . "\" ";
@@ -38,7 +38,7 @@ function laptopDetails($laptopId, $laptops) {
 
     $dv .= "<input type=\"submit\" name=\"submit\" value=\"Add Preference\" id=\"formButton\">";
     $dv .= "<input type=\"hidden\" name=\"action\" value=\"addpref\">";
-    $dv .= "<input type=\"hidden\" name=\"laptopId\" value=" . $laptopId . "></form><br><br>";
+    $dv .= "<input type=\"hidden\" name=\"laptopId\" value=" . $laptopId . "></form><br><br></div>";
 
 
     //$dv .= "<span onclick=" . removePreferedLaptop($laptopId) . " class=`preferedLaptop`>Add to prefered laptop</span><br>";
