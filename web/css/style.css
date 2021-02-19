@@ -322,3 +322,15 @@ main {
 #laptopsList li:nth-child(even) {
 color: cadetblue;
 }
+
+#likeText {
+color: rgb(112, 182, 112);
+min-width: 300px;
+min-height: 200px;
+}
+
+#dislikeText {
+color: rgb(161, 114, 114);
+min-width: 300px;
+min-height: 200px;
+}
