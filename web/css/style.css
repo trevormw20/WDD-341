@@ -319,18 +319,18 @@ main {
     border-radius: 0;
 }
 
-.laptopsList:nth-child(even) {
+.laptopsList li {
     background-color: cadetblue;
 }
 
 #likeText {
-background-color: rgb(112, 182, 112);
+background-color: rgb(153, 206, 153);
 min-width: 300px;
 min-height: 125px;
 }
 
 #dislikeText {
-    background-color: rgb(161, 114, 114);
+    background-color: rgb(196, 163, 163);
 min-width: 300px;
 min-height: 125px;
 }
