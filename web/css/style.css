@@ -275,7 +275,7 @@ image {
 }
 
 .sidesSpacer {
-	box-shadow: 0 3px 5px 0 rgb(218, 217, 217), 0 5px 10px 0 rgb(216, 216, 216);
+	box-shadow: 0 3px 5px 0 rgb(197, 197, 197), 0 5px 10px 0 rgb(216, 216, 216);
 	margin: 1em 0em 0em 3em 
 }
 
@@ -317,4 +317,8 @@ main {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
+}
+
+#laptopsList li:nth-child(even) {
+color: cadetblue;
 }

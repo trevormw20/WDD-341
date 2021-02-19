@@ -5,14 +5,14 @@
 * ********************************* */
 function laptopsDisplay($laptops)
 {
-    $dv = '<ul>';
+    $dv = '<ul id="laptopsList">';
     foreach ($laptops as $laptop) {
         $dv .= '<li>' . $laptop['laptopmaker'] . ' ' . $laptop['laptopmodel'] . ' ';
         $dv .= $laptop['laptopcpu'] . ' ' . $laptop['laptopgpu'] . ' ';
         $dv .= $laptop['laptopram'] . "GB" . ' ' . $laptop['laptopstorage'] . "TB ";
         $dv .= $laptop['laptopscreen'] . "\"";
         $dv .= "<a href=/week4/?action=laptopDetails&laptopId=" . $laptop['laptopid'] . ">View details</a>";
-        $dv .= '</li>';
+        $dv .= '</li><br>';
     }
     $dv .= '</ul>';
     return $dv;
@@ -23,11 +23,11 @@ function laptopsDisplay($laptops)
 * ********************************* */
 function laptopDetails($laptopId, $laptops) {    
     //$dv =  $laptopId . " -- " . $laptops[0]['laptopmaker'] . " " . $laptops[2]['laptopmaker'];
-    $dv =  $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
+    $dv =  "<p>" . $laptops[$laptopId]['laptopmaker'] . ' ' . $laptops[$laptopId]['laptopmodel'] . ' ';
     $dv .= $laptops[$laptopId]['laptopcpu'] . ' ' . $laptops[$laptopId]['laptopgpu'] . ' ';
     $dv .= $laptops[$laptopId]['laptopram'] . "GB" . ' ' . $laptops[$laptopId]['laptopstorage'] . "TB ";
     $dv .= $laptops[$laptopId]['laptopscreen'] . "\" ";
-    $dv .= $laptops[$laptopId]['laptopSpecs'];
+    $dv .= $laptops[$laptopId]['laptopSpecs'] . "</p>";
 
 
     $dv .= "<form action=\"index.php\" method=\"post\" id=\"addpref\">";
