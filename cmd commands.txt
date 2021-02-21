@@ -10,6 +10,23 @@ heroku pg:info		see databases and their info
 
 heroku pg:psql		connect to db
 
+https://intense-springs-32154.herokuapp.com/
+
+https://git.heroku.com/intense-springs-32154.git
+
+INSERT INTO users(userId, userFirstname, userLastname, userEmail, userPassword) VALUES 
+('1','Trevor','Williams','trevor@gmail.com', 'admin');
+
+
+ //************************************************
+        /**********************************************  */
+        //************************************************
+        /**********************************************  */
+        //////**************ADD ALL INFRORMATION INTO MESSAGE
+        //************************************************
+        /**********************************************  */
+        //************************************************
+        /**********************************************  */
 
 INSERT INTO laptops (laptopId, laptopMaker, laptopModel, laptopSpecs, laptopGpu, laptopCpu, laptopRam, laptopStorage, laptopScreen, 
 laptopImage, laptopThumbnail, laptopPrice, series, releaseDate, lastGenRating) VALUES 
