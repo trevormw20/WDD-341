@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1>This the home page.</h1>
+    <% if (username) { %> <h2>Welcome username <% } else { %> <h2>I dont have a name</h2> <% } %></h2>}
+    </h2>
+
+    <form  method="post">
+        <h3>Please enter the weight:</h3>
+        <input type="number" id="weight" name="weight">
+
+        <h3>Please select which type of mail:</h3>
+        
+        <label for="lettersStamped">Letters (Stamped)</label>
+        <input type="radio" id="lettersStamped" name="type" value="Letters (Stamped)"><br>
+        
+        <label for="lettersMetered">Letters (Metered)</label>
+        <input type="radio" id="lettersMetered" name="type" value="Letters (Metered)"><br>
+        
+        <label for="envelopeFlats">Large Envelopes (Flats)</label>
+        <input type="radio" id="envelopeFlats" name="type" value="Large Envelopes (Flats)"><br>
+        
+        <label for="First-Class">First-Class Package Service—Retail</label>
+        <input type="radio" id="First-Class" name="type" value="First-Class Package Service—Retail"><br><br>
+
+        <input type="submit" value="postRates">
+    </form><br><br></div>
+</body>
+
+</html>
+
+<script src="functions.js"></script>
