@@ -1,0 +1,52 @@
+.arrow {
+    border: solid rgb(61, 167, 131);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 10px;;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .forward {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
+.arrowBox{
+  float: left;
+    border: 3px solid rgb(61, 167, 131);
+    max-width: 50px;
+    max-height: 50px;
+    box-shadow: 2px 5px 10px rgb(61, 167, 131) inset;
+    margin-right: 1em;
+}
+
+body {
+  background-color: rgb(56, 56, 56);
+  margin: 3em;
+  margin-left: 5em;
+  color: rgb(104, 192, 163);
+  
+}
+
+.adventureText{
+  color: rgb(61, 167, 131);
+}
+
+h1 {
+  text-shadow: 2px 5px 10px rgb(22, 73, 56) inset;
+  padding-bottom: 3em;
+}
+
+#leftDirection {
+  clear: both;
+}

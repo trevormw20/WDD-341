@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Home Page</title>
-    </head>
 
-    <body>
-        <h1>This the home page.</h1>
-        <h2>Welcome <%= username %>, your email: <%= email %></h2>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
 
+<body>
+    <h1>This is where your adventure begins.</h1>
+
+    <div id="leftDirection">
+        <div class="arrowBox">
+            <i class="arrow left"></i>
+        </div>
+        <h2 class="adventureText">
+            <%= left %>
+        </h2>
         
-        <p>This is an ejs...</p>
-    </body>
+    </div>
+    <br>
+
+
+    <div id="forwardDirection">
+        <div class="arrowBox">
+            <i class="arrow forward"></i>
+        </div>
+        <h2 class="adventureText">
+            <%= forward %>
+        </h2>
+        
+    </div>
+    <br>
+
+
+    <div id="rightDirection">
+        <div class="arrowBox">
+            <i class="arrow right"></i>
+        </div>
+        <h2 class="adventureText">
+            <%= right %>
+        </h2>
+        
+    </div>
+
+
+</body>
+
 </html>
+
+<script src="/functions.js"></script>

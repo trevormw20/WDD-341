@@ -3,6 +3,10 @@ var bodyParser = require('body-parser')
 
 var app = express();
 
+//var express = require('express');
+//var path = require('path');
+//app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(__dirname + '/public'));
 app.use(express.static("public"));
 
 app.use(express.json());
@@ -18,40 +22,6 @@ app.get("/", function (req, res) {
     res.end();
 });
 
-//controller
-app.get("/home", function (req, res) {
-
-    var name = getCurrentLoggedInUserAccount();
-    var emailAddress = "john@email.com";
-
-    var params = { username: name, email: emailAddress };
-
-
-    //view
-    res.render("home", params);
-});
-
-app.get("/getRates", function (req, res) {
-
-    var name = getCurrentLoggedInUserAccount();
-    var emailAddress = "john@email.com";
-
-    var params = { username: name, email: emailAddress };
-
-    //view
-    res.render("rates", params);
-});
-
-app.post("/getRates", function (req, res) {
-    console.log("post in progress");
-
-    var weight = req.body.weight;
-    var type = req.body.type;
-
-    console.log(calculateRate(type, weight));
-    calculateRate(type, weight);
-    res.render("rates");
-});
 
 app.listen(8888, function () {
     console.log("The server is up and listening on Port 8888");
@@ -60,11 +30,11 @@ app.listen(8888, function () {
 //controller adventurer choices
 app.get("/start", function (req, res) {
 
-    adventureTime(encounter);
+    //adventureTime(encounter);
 
-    var left = getCurrentLoggedInUserAccount();
-    var forward = "john@email.com";
-    var right = "test";
+    var left = "Start going towards the left.";
+    var forward = "Start by going forward.";
+    var right = "Start going towards the right.";
 
     var params = { left: left, forward: forward, right: right };
 
@@ -73,10 +43,22 @@ app.get("/start", function (req, res) {
     res.render("start", params);
 });
 
-//model
-function getCurrentLoggedInUserAccount() {
-    return "John";
-}
+app.post("/start", function (req, res) {
+
+    //adventureTime(encounter);
+    var adventureText = displayAdventureText();
+
+    var left = displayTextLeft();
+    var forward = displayTextForward();
+    var right = displayTextRight();
+
+    var params = { left: left, forward: forward, right: right , mainText: adventureText};
+
+
+    //view
+    res.render("start", params);
+});
+
 
 function adventureTime(encounter) {
     if (encounter == "enemy") {
