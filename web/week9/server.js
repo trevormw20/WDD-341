@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require('body-parser')
 
 var app = express();
+var rates = 0;
 
 app.use(express.static("public"));
 
@@ -34,9 +35,12 @@ app.get("/home", function (req, res) {
 app.get("/getRates", function (req, res) {
 
     var name = getCurrentLoggedInUserAccount();
-    var emailAddress = "john@email.com";
+    var emailAddress = "get@email.com";
 
-    var params = { username: name, email: emailAddress };
+    var params = { username: name, email: emailAddress};
+
+    //app.locals.rates = calculateRate(type, weight);
+    app.locals.email = 1;
 
     //view
     res.render("rates", params);
@@ -48,8 +52,16 @@ app.post("/getRates", function (req, res) {
     var weight = req.body.weight;
     var type = req.body.type;
 
+    var name = getCurrentLoggedInUserAccount();
+    var emailAddress = "post@email.com";
+
     console.log(calculateRate(type, weight));
-    calculateRate(type, weight);
+
+    app.locals.email = emailAddress;
+    app.locals.username = name;
+    //app.locals.rates = "2";
+    app.locals.rates = calculateRate(type, weight);
+
     res.render("rates");
 });
 

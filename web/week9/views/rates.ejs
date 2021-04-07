@@ -7,8 +7,11 @@
 
 <body>
     <h1>This the home page.</h1>
-    <% if (username) { %> <h2>Welcome username <% } else { %> <h2>I dont have a name</h2> <% } %></h2>}
-    </h2>
+    <% if (typeof rates !== 'undefined') { %> <h2>Welcome <%= rates %> <% } else { %> <h2>I dont have a rates</h2> <% } %></h2>
+    <h2>Welcome <%= username %>, your email: <%= email %></h2>
+
+
+   
 
     <form  method="post">
         <h3>Please enter the weight:</h3>
